@@ -1,0 +1,22 @@
+#/geometry/navigator/verbose 2
+#/geometry/test
+
+/vis/scene/create
+
+#/vis/open ATree
+#/vis/ASCIITree/verbose 12
+
+/vis/open DAWNFILE
+
+/vis/scene/add/trajectories
+/vis/sceneHandler/attach
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
+/vis/scene/endOfEventAction accumulate
+
+#/vis/viewer/reset
+#/vis/viewer/flush
+
+/vis/drawVolume
+/vis/viewer/update

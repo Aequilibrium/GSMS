@@ -1,0 +1,12 @@
+AC_INIT(configure.in)
+
+AM_CONFIG_HEADER(config.h)
+AM_INIT_AUTOMAKE(gsms, 0.2)
+
+AC_LANG_CPLUSPLUS
+AC_PROG_CXX
+AM_PROG_LIBTOOL
+
+AC_OUTPUT(Makefile src/Makefile src/action/Makefile src/config/Makefile \
+	src/detector/Makefile src/generator/Makefile src/generator/database/Makefile \
+	src/geometry/Makefile src/physics/Makefile src/ui/Makefile)

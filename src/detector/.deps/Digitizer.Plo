@@ -1,0 +1,1159 @@
+Digitizer.lo: Digitizer.cpp Digitizer.h /usr/include/geant/G4THitsMap.hh \
+ /usr/include/geant/G4THitsCollection.hh \
+ /usr/include/geant/G4VHitsCollection.hh /usr/include/geant/globals.hh \
+ /usr/include/geant/G4ios.hh /usr/include/geant/G4Types.hh \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/complex \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/c++config.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/os_defines.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
+ /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+ /usr/include/gnu/stubs-32.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/cpp_type_traits.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/ext/type_traits.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cmath \
+ /usr/include/math.h /usr/include/bits/huge_val.h \
+ /usr/include/bits/huge_valf.h /usr/include/bits/huge_vall.h \
+ /usr/include/bits/inf.h /usr/include/bits/nan.h \
+ /usr/include/bits/mathdef.h /usr/include/bits/mathcalls.h \
+ /usr/include/bits/mathinline.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/cmath.tcc \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/sstream \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/istream \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/ios \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/iosfwd \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stringfwd.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/postypes.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cwchar \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cstddef \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/stddef.h \
+ /usr/include/wchar.h /usr/include/stdio.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/stdarg.h \
+ /usr/include/bits/wchar.h /usr/include/xlocale.h \
+ /usr/include/bits/wchar2.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/exception \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/char_traits.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_algobase.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/functexcept.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/exception_defines.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/ext/numeric_traits.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_pair.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/move.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/concept_check.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_iterator_base_types.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_iterator_base_funcs.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_iterator.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/debug/debug.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/localefwd.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/c++locale.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/clocale \
+ /usr/include/locale.h /usr/include/bits/locale.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cctype \
+ /usr/include/ctype.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/endian.h \
+ /usr/include/bits/endian.h /usr/include/bits/byteswap.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/ios_base.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/ext/atomicity.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/gthr.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/gthr-default.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/time.h \
+ /usr/include/bits/sched.h /usr/include/bits/time.h /usr/include/signal.h \
+ /usr/include/bits/sigset.h /usr/include/bits/pthreadtypes.h \
+ /usr/include/bits/setjmp.h /usr/include/unistd.h \
+ /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+ /usr/include/bits/confname.h /usr/include/getopt.h \
+ /usr/include/bits/unistd.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/atomic_word.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/locale_classes.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/string \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/allocator.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/c++allocator.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/ext/new_allocator.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/new \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/ostream_insert.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cxxabi-forced.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_function.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/backward/binders.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/basic_string.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/initializer_list \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/basic_string.tcc \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/locale_classes.tcc \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/streambuf \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/streambuf.tcc \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/basic_ios.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/locale_facets.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cwctype \
+ /usr/include/wctype.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/ctype_base.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/streambuf_iterator.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/ctype_inline.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/locale_facets.tcc \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/basic_ios.tcc \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/ostream \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/ostream.tcc \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/istream.tcc \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/sstream.tcc \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/iostream \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/algorithm \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_algo.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cstdlib \
+ /usr/include/stdlib.h /usr/include/bits/waitflags.h \
+ /usr/include/bits/waitstatus.h /usr/include/sys/types.h \
+ /usr/include/sys/select.h /usr/include/bits/select.h \
+ /usr/include/sys/sysmacros.h /usr/include/alloca.h \
+ /usr/include/bits/stdlib.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/algorithmfwd.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_heap.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_tempbuf.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_construct.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_uninitialized.h \
+ /usr/include/geant/G4String.hh /usr/include/libio.h \
+ /usr/include/_G_config.h /usr/include/bits/stdio_lim.h \
+ /usr/include/bits/sys_errlist.h /usr/include/bits/stdio.h \
+ /usr/include/bits/stdio2.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cstring \
+ /usr/include/string.h /usr/include/bits/string3.h \
+ /usr/include/geant/G4String.icc /usr/include/geant/templates.hh \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/limits \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/climits \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include-fixed/limits.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include-fixed/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/geant/G4PhysicalConstants.hh \
+ /usr/include/CLHEP/Units/PhysicalConstants.h \
+ /usr/include/CLHEP/Units/defs.h /usr/include/CLHEP/Units/SystemOfUnits.h \
+ /usr/include/geant/G4SystemOfUnits.hh \
+ /usr/include/geant/G4ExceptionSeverity.hh \
+ /usr/include/geant/G4Allocator.hh /usr/include/geant/G4AllocatorPool.hh \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/vector \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_vector.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_bvector.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/vector.tcc \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/map \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_tree.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_map.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_multimap.h \
+ /usr/include/geant/G4VDigitizerModule.hh ../../src/detector/Digi.h \
+ /usr/include/geant/G4VDigi.hh /usr/include/geant/G4TDigiCollection.hh \
+ /usr/include/geant/G4VDigiCollection.hh \
+ /usr/include/geant/G4Allocator.hh /usr/include/geant/G4ThreeVector.hh \
+ /usr/include/CLHEP/Vector/ThreeVector.h /usr/include/CLHEP/Vector/defs.h \
+ /usr/include/CLHEP/Vector/ThreeVector.icc /usr/include/geant/globals.hh \
+ /usr/include/geant/G4EventManager.hh /usr/include/geant/evmandefs.hh \
+ /usr/include/geant/trajectoryControl.hh \
+ /usr/include/geant/G4StackManager.hh \
+ /usr/include/geant/G4UserStackingAction.hh \
+ /usr/include/geant/G4ClassificationOfNewTrack.hh \
+ /usr/include/geant/G4StackedTrack.hh /usr/include/geant/G4Track.hh \
+ /usr/include/geant/G4ThreeVector.hh \
+ /usr/include/geant/G4LogicalVolume.hh /usr/include/geant/G4Region.hh \
+ /usr/include/geant/G4Region.icc /usr/include/geant/G4VPhysicalVolume.hh \
+ /usr/include/geant/geomdefs.hh /usr/include/geant/G4RotationMatrix.hh \
+ /usr/include/CLHEP/Vector/Rotation.h \
+ /usr/include/CLHEP/Vector/RotationInterfaces.h \
+ /usr/include/CLHEP/Vector/LorentzVector.h \
+ /usr/include/CLHEP/Vector/LorentzVector.icc \
+ /usr/include/CLHEP/Vector/ZMxpv.h /usr/include/CLHEP/Vector/AxisAngle.h \
+ /usr/include/CLHEP/Vector/AxisAngle.icc \
+ /usr/include/CLHEP/Vector/RotationInterfaces.icc \
+ /usr/include/CLHEP/Vector/RotationX.h \
+ /usr/include/CLHEP/Vector/RotationX.icc \
+ /usr/include/CLHEP/Vector/RotationY.h \
+ /usr/include/CLHEP/Vector/RotationY.icc \
+ /usr/include/CLHEP/Vector/RotationZ.h \
+ /usr/include/CLHEP/Vector/RotationZ.icc \
+ /usr/include/CLHEP/Vector/Rotation.icc \
+ /usr/include/geant/G4VPhysicalVolume.icc /usr/include/assert.h \
+ /usr/include/geant/G4LogicalVolume.icc \
+ /usr/include/geant/G4DynamicParticle.hh \
+ /usr/include/geant/G4ParticleDefinition.hh \
+ /usr/include/geant/G4ParticleDefinition.icc \
+ /usr/include/geant/G4LorentzVector.hh \
+ /usr/include/geant/G4ParticleMomentum.hh \
+ /usr/include/geant/G4ElectronOccupancy.hh \
+ /usr/include/geant/G4PrimaryParticle.hh \
+ /usr/include/geant/G4DynamicParticle.icc \
+ /usr/include/geant/G4TrackStatus.hh \
+ /usr/include/geant/G4TouchableHandle.hh \
+ /usr/include/geant/G4VTouchable.hh /usr/include/geant/G4VTouchable.icc \
+ /usr/include/geant/G4ReferenceCountedHandle.hh \
+ /usr/include/geant/G4VUserTrackInformation.hh \
+ /usr/include/geant/G4Material.hh /usr/include/geant/G4Element.hh \
+ /usr/include/geant/G4Isotope.hh /usr/include/geant/G4AtomicShells.hh \
+ /usr/include/geant/G4IonisParamElm.hh \
+ /usr/include/geant/G4IsotopeVector.hh \
+ /usr/include/geant/G4ElementTable.hh \
+ /usr/include/geant/G4MaterialPropertiesTable.hh \
+ /usr/include/geant/G4MaterialPropertyVector.hh \
+ /usr/include/geant/G4MPVEntry.hh \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/functional \
+ /usr/include/geant/G4IonisParamMat.hh \
+ /usr/include/geant/G4SandiaTable.hh /usr/include/geant/G4OrderedTable.hh \
+ /usr/include/geant/G4DataVector.hh \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/fstream \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/codecvt.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cstdio \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/basic_file.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/c++io.h \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/fstream.tcc \
+ /usr/include/geant/G4DataVector.icc \
+ /usr/include/geant/G4ElementVector.hh \
+ /usr/include/geant/G4MaterialTable.hh /usr/include/geant/G4Step.hh \
+ /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/iomanip \
+ /usr/include/geant/G4StepPoint.hh \
+ /usr/include/geant/G4SteppingControl.hh \
+ /usr/include/geant/G4StepStatus.hh /usr/include/geant/G4StepPoint.icc \
+ /usr/include/geant/G4TrackVector.hh /usr/include/geant/G4Step.icc \
+ /usr/include/geant/G4Track.icc /usr/include/geant/G4TrackStack.hh \
+ /usr/include/geant/G4TrajectoryContainer.hh \
+ /usr/include/geant/G4VTrajectory.hh \
+ /usr/include/geant/G4PrimaryTransformer.hh \
+ /usr/include/geant/G4ParticleTable.hh \
+ /usr/include/geant/G4ParticleTableIterator.hh \
+ /usr/include/geant/G4ParticleTable.icc \
+ /usr/include/geant/G4TrackingManager.hh \
+ /usr/include/geant/G4SteppingManager.hh /usr/include/geant/Randomize.hh \
+ /usr/include/CLHEP/Random/Randomize.h /usr/include/CLHEP/Random/defs.h \
+ /usr/include/CLHEP/Random/DRand48Engine.h \
+ /usr/include/CLHEP/Random/RandomEngine.h \
+ /usr/include/CLHEP/Random/RandomEngine.icc \
+ /usr/include/CLHEP/Random/DualRand.h \
+ /usr/include/CLHEP/Random/Hurd160Engine.h \
+ /usr/include/CLHEP/Random/Hurd288Engine.h \
+ /usr/include/CLHEP/Random/JamesRandom.h \
+ /usr/include/CLHEP/Random/MTwistEngine.h \
+ /usr/include/CLHEP/Random/RandEngine.h \
+ /usr/include/CLHEP/Random/RanecuEngine.h \
+ /usr/include/CLHEP/Random/RanluxEngine.h \
+ /usr/include/CLHEP/Random/Ranlux64Engine.h \
+ /usr/include/CLHEP/Random/RanshiEngine.h \
+ /usr/include/CLHEP/Random/TripleRand.h \
+ /usr/include/CLHEP/Random/RandBinomial.h \
+ /usr/include/CLHEP/Random/Random.h /usr/include/CLHEP/Random/Random.icc \
+ /usr/include/CLHEP/Random/RandBinomial.icc \
+ /usr/include/CLHEP/Random/RandBreitWigner.h \
+ /usr/include/CLHEP/Random/RandFlat.h \
+ /usr/include/CLHEP/Random/RandFlat.icc \
+ /usr/include/CLHEP/Random/RandBreitWigner.icc \
+ /usr/include/CLHEP/Random/RandChiSquare.h \
+ /usr/include/CLHEP/Random/RandChiSquare.icc \
+ /usr/include/CLHEP/Random/RandExponential.h \
+ /usr/include/CLHEP/Random/RandExponential.icc \
+ /usr/include/CLHEP/Random/RandBit.h \
+ /usr/include/CLHEP/Random/RandBit.icc \
+ /usr/include/CLHEP/Random/RandGamma.h \
+ /usr/include/CLHEP/Random/RandGamma.icc \
+ /usr/include/CLHEP/Random/RandGauss.h \
+ /usr/include/CLHEP/Random/RandGauss.icc \
+ /usr/include/CLHEP/Random/RandGaussQ.h \
+ /usr/include/CLHEP/Random/RandGaussQ.icc \
+ /usr/include/CLHEP/Random/RandGaussT.h /usr/include/CLHEP/Random/Stat.h \
+ /usr/include/CLHEP/Random/RandGaussT.icc \
+ /usr/include/CLHEP/Random/RandGeneral.h \
+ /usr/include/CLHEP/Random/RandGeneral.icc \
+ /usr/include/CLHEP/Random/RandLandau.h \
+ /usr/include/CLHEP/Random/RandLandau.icc \
+ /usr/include/CLHEP/Random/RandPoissonQ.h \
+ /usr/include/CLHEP/Random/RandPoisson.h \
+ /usr/include/CLHEP/Random/RandPoisson.icc \
+ /usr/include/CLHEP/Random/RandPoissonQ.icc \
+ /usr/include/CLHEP/Random/RandPoissonT.h \
+ /usr/include/CLHEP/Random/RandPoissonT.icc \
+ /usr/include/CLHEP/Random/RandStudentT.h \
+ /usr/include/CLHEP/Random/RandStudentT.icc \
+ /usr/include/geant/G4Navigator.hh \
+ /usr/include/geant/G4AffineTransform.hh \
+ /usr/include/geant/G4AffineTransform.icc \
+ /usr/include/geant/G4GRSVolume.hh /usr/include/geant/G4GRSVolume.icc \
+ /usr/include/geant/G4GRSSolid.hh /usr/include/geant/G4GRSSolid.icc \
+ /usr/include/geant/G4TouchableHistoryHandle.hh \
+ /usr/include/geant/G4TouchableHistory.hh \
+ /usr/include/geant/G4NavigationHistory.hh \
+ /usr/include/geant/G4NavigationLevel.hh \
+ /usr/include/geant/G4NavigationLevelRep.hh \
+ /usr/include/geant/G4NavigationLevelRep.icc \
+ /usr/include/geant/G4NavigationLevel.icc \
+ /usr/include/geant/G4NavigationHistory.icc \
+ /usr/include/geant/G4TouchableHistory.icc \
+ /usr/include/geant/G4NormalNavigation.hh /usr/include/geant/G4VSolid.hh \
+ /usr/include/geant/G4VSolid.icc \
+ /usr/include/geant/G4AuxiliaryNavServices.hh \
+ /usr/include/geant/G4AuxiliaryNavServices.icc \
+ /usr/include/geant/G4NormalNavigation.icc \
+ /usr/include/geant/G4VoxelNavigation.hh \
+ /usr/include/geant/G4BlockingList.hh \
+ /usr/include/geant/G4BlockingList.icc \
+ /usr/include/geant/G4SmartVoxelProxy.hh \
+ /usr/include/geant/G4SmartVoxelProxy.icc \
+ /usr/include/geant/G4SmartVoxelNode.hh \
+ /usr/include/geant/G4SmartVoxelNode.icc \
+ /usr/include/geant/G4SmartVoxelHeader.hh \
+ /usr/include/geant/G4SmartVoxelHeader.icc \
+ /usr/include/geant/G4VoxelNavigation.icc \
+ /usr/include/geant/G4ParameterisedNavigation.hh \
+ /usr/include/geant/G4VPVParameterisation.hh \
+ /usr/include/geant/G4VVolumeMaterialScanner.hh \
+ /usr/include/geant/G4ParameterisedNavigation.icc \
+ /usr/include/geant/G4ReplicaNavigation.hh \
+ /usr/include/geant/G4ReplicaNavigation.icc \
+ /usr/include/geant/G4RegularNavigation.hh \
+ /usr/include/geant/G4Navigator.icc \
+ /usr/include/geant/G4ProcessManager.hh /usr/include/geant/G4VProcess.hh \
+ /usr/include/geant/G4PhysicsTable.hh \
+ /usr/include/geant/G4PhysicsVector.hh \
+ /usr/include/geant/G4PhysicsVectorType.hh \
+ /usr/include/geant/G4PhysicsVector.icc \
+ /usr/include/geant/G4PhysicsTable.icc \
+ /usr/include/geant/G4VParticleChange.hh \
+ /usr/include/geant/G4TrackFastVector.hh \
+ /usr/include/geant/G4FastVector.hh \
+ /usr/include/geant/G4VParticleChange.icc \
+ /usr/include/geant/G4ForceCondition.hh \
+ /usr/include/geant/G4GPILSelection.hh \
+ /usr/include/geant/G4ParticleChange.hh \
+ /usr/include/geant/G4ParticleChange.icc \
+ /usr/include/geant/G4ProcessType.hh \
+ /usr/include/geant/G4ProcessVector.hh \
+ /usr/include/geant/G4ProcessVector.icc \
+ /usr/include/geant/G4ProcessManager.icc \
+ /usr/include/geant/G4ProcessAttribute.hh \
+ /usr/include/geant/G4UserSteppingAction.hh \
+ /usr/include/geant/G4VSteppingVerbose.hh \
+ /usr/include/geant/G4TrackingMessenger.hh \
+ /usr/include/geant/G4UImessenger.hh \
+ /usr/include/geant/G4UserTrackingAction.hh /usr/include/geant/G4Event.hh \
+ /usr/include/geant/G4PrimaryVertex.hh \
+ /usr/include/geant/G4HCofThisEvent.hh \
+ /usr/include/geant/G4DCofThisEvent.hh \
+ /usr/include/geant/G4VUserEventInformation.hh \
+ /usr/include/geant/G4SDManager.hh /usr/include/geant/G4SDStructure.hh \
+ /usr/include/geant/G4VSensitiveDetector.hh /usr/include/geant/G4VHit.hh \
+ /usr/include/geant/G4VReadOutGeometry.hh \
+ /usr/include/geant/G4SensitiveVolumeList.hh \
+ /usr/include/geant/G4CollectionNameVector.hh \
+ /usr/include/geant/G4VSDFilter.hh /usr/include/geant/G4HCtable.hh \
+ /usr/include/geant/G4DigiManager.hh \
+ /usr/include/geant/G4VDigitizerModule.hh /usr/include/geant/G4DCtable.hh \
+ /usr/include/geant/G4Poisson.hh /usr/include/geant/G4ios.hh
+
+Digitizer.h:
+
+/usr/include/geant/G4THitsMap.hh:
+
+/usr/include/geant/G4THitsCollection.hh:
+
+/usr/include/geant/G4VHitsCollection.hh:
+
+/usr/include/geant/globals.hh:
+
+/usr/include/geant/G4ios.hh:
+
+/usr/include/geant/G4Types.hh:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/complex:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/c++config.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/os_defines.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-32.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/cpu_defines.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/cpp_type_traits.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/ext/type_traits.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cmath:
+
+/usr/include/math.h:
+
+/usr/include/bits/huge_val.h:
+
+/usr/include/bits/huge_valf.h:
+
+/usr/include/bits/huge_vall.h:
+
+/usr/include/bits/inf.h:
+
+/usr/include/bits/nan.h:
+
+/usr/include/bits/mathdef.h:
+
+/usr/include/bits/mathcalls.h:
+
+/usr/include/bits/mathinline.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/cmath.tcc:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/sstream:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/istream:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/ios:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/iosfwd:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stringfwd.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/postypes.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cwchar:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cstddef:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/stddef.h:
+
+/usr/include/wchar.h:
+
+/usr/include/stdio.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/stdarg.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/xlocale.h:
+
+/usr/include/bits/wchar2.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/exception:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/char_traits.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_algobase.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/functexcept.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/exception_defines.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/ext/numeric_traits.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_pair.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/move.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/concept_check.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_iterator_base_types.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_iterator_base_funcs.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_iterator.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/debug/debug.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/localefwd.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/c++locale.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/clocale:
+
+/usr/include/locale.h:
+
+/usr/include/bits/locale.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cctype:
+
+/usr/include/ctype.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/ios_base.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/ext/atomicity.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/gthr.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/gthr-default.h:
+
+/usr/include/pthread.h:
+
+/usr/include/sched.h:
+
+/usr/include/time.h:
+
+/usr/include/bits/sched.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/signal.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/bits/setjmp.h:
+
+/usr/include/unistd.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/environments.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/getopt.h:
+
+/usr/include/bits/unistd.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/atomic_word.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/locale_classes.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/string:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/allocator.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/c++allocator.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/ext/new_allocator.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/new:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/ostream_insert.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cxxabi-forced.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_function.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/backward/binders.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/basic_string.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/initializer_list:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/basic_string.tcc:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/locale_classes.tcc:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/streambuf:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/streambuf.tcc:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/basic_ios.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/locale_facets.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cwctype:
+
+/usr/include/wctype.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/ctype_base.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/streambuf_iterator.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/ctype_inline.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/locale_facets.tcc:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/basic_ios.tcc:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/ostream:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/ostream.tcc:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/istream.tcc:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/sstream.tcc:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/iostream:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/algorithm:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_algo.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cstdlib:
+
+/usr/include/stdlib.h:
+
+/usr/include/bits/waitflags.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/alloca.h:
+
+/usr/include/bits/stdlib.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/algorithmfwd.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_heap.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_tempbuf.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_construct.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_uninitialized.h:
+
+/usr/include/geant/G4String.hh:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+/usr/include/bits/stdio2.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cstring:
+
+/usr/include/string.h:
+
+/usr/include/bits/string3.h:
+
+/usr/include/geant/G4String.icc:
+
+/usr/include/geant/templates.hh:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/limits:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/climits:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include-fixed/limits.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include-fixed/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/include/bits/xopen_lim.h:
+
+/usr/include/geant/G4PhysicalConstants.hh:
+
+/usr/include/CLHEP/Units/PhysicalConstants.h:
+
+/usr/include/CLHEP/Units/defs.h:
+
+/usr/include/CLHEP/Units/SystemOfUnits.h:
+
+/usr/include/geant/G4SystemOfUnits.hh:
+
+/usr/include/geant/G4ExceptionSeverity.hh:
+
+/usr/include/geant/G4Allocator.hh:
+
+/usr/include/geant/G4AllocatorPool.hh:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/vector:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_vector.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_bvector.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/vector.tcc:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/map:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_tree.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_map.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/stl_multimap.h:
+
+/usr/include/geant/G4VDigitizerModule.hh:
+
+../../src/detector/Digi.h:
+
+/usr/include/geant/G4VDigi.hh:
+
+/usr/include/geant/G4TDigiCollection.hh:
+
+/usr/include/geant/G4VDigiCollection.hh:
+
+/usr/include/geant/G4Allocator.hh:
+
+/usr/include/geant/G4ThreeVector.hh:
+
+/usr/include/CLHEP/Vector/ThreeVector.h:
+
+/usr/include/CLHEP/Vector/defs.h:
+
+/usr/include/CLHEP/Vector/ThreeVector.icc:
+
+/usr/include/geant/globals.hh:
+
+/usr/include/geant/G4EventManager.hh:
+
+/usr/include/geant/evmandefs.hh:
+
+/usr/include/geant/trajectoryControl.hh:
+
+/usr/include/geant/G4StackManager.hh:
+
+/usr/include/geant/G4UserStackingAction.hh:
+
+/usr/include/geant/G4ClassificationOfNewTrack.hh:
+
+/usr/include/geant/G4StackedTrack.hh:
+
+/usr/include/geant/G4Track.hh:
+
+/usr/include/geant/G4ThreeVector.hh:
+
+/usr/include/geant/G4LogicalVolume.hh:
+
+/usr/include/geant/G4Region.hh:
+
+/usr/include/geant/G4Region.icc:
+
+/usr/include/geant/G4VPhysicalVolume.hh:
+
+/usr/include/geant/geomdefs.hh:
+
+/usr/include/geant/G4RotationMatrix.hh:
+
+/usr/include/CLHEP/Vector/Rotation.h:
+
+/usr/include/CLHEP/Vector/RotationInterfaces.h:
+
+/usr/include/CLHEP/Vector/LorentzVector.h:
+
+/usr/include/CLHEP/Vector/LorentzVector.icc:
+
+/usr/include/CLHEP/Vector/ZMxpv.h:
+
+/usr/include/CLHEP/Vector/AxisAngle.h:
+
+/usr/include/CLHEP/Vector/AxisAngle.icc:
+
+/usr/include/CLHEP/Vector/RotationInterfaces.icc:
+
+/usr/include/CLHEP/Vector/RotationX.h:
+
+/usr/include/CLHEP/Vector/RotationX.icc:
+
+/usr/include/CLHEP/Vector/RotationY.h:
+
+/usr/include/CLHEP/Vector/RotationY.icc:
+
+/usr/include/CLHEP/Vector/RotationZ.h:
+
+/usr/include/CLHEP/Vector/RotationZ.icc:
+
+/usr/include/CLHEP/Vector/Rotation.icc:
+
+/usr/include/geant/G4VPhysicalVolume.icc:
+
+/usr/include/assert.h:
+
+/usr/include/geant/G4LogicalVolume.icc:
+
+/usr/include/geant/G4DynamicParticle.hh:
+
+/usr/include/geant/G4ParticleDefinition.hh:
+
+/usr/include/geant/G4ParticleDefinition.icc:
+
+/usr/include/geant/G4LorentzVector.hh:
+
+/usr/include/geant/G4ParticleMomentum.hh:
+
+/usr/include/geant/G4ElectronOccupancy.hh:
+
+/usr/include/geant/G4PrimaryParticle.hh:
+
+/usr/include/geant/G4DynamicParticle.icc:
+
+/usr/include/geant/G4TrackStatus.hh:
+
+/usr/include/geant/G4TouchableHandle.hh:
+
+/usr/include/geant/G4VTouchable.hh:
+
+/usr/include/geant/G4VTouchable.icc:
+
+/usr/include/geant/G4ReferenceCountedHandle.hh:
+
+/usr/include/geant/G4VUserTrackInformation.hh:
+
+/usr/include/geant/G4Material.hh:
+
+/usr/include/geant/G4Element.hh:
+
+/usr/include/geant/G4Isotope.hh:
+
+/usr/include/geant/G4AtomicShells.hh:
+
+/usr/include/geant/G4IonisParamElm.hh:
+
+/usr/include/geant/G4IsotopeVector.hh:
+
+/usr/include/geant/G4ElementTable.hh:
+
+/usr/include/geant/G4MaterialPropertiesTable.hh:
+
+/usr/include/geant/G4MaterialPropertyVector.hh:
+
+/usr/include/geant/G4MPVEntry.hh:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/functional:
+
+/usr/include/geant/G4IonisParamMat.hh:
+
+/usr/include/geant/G4SandiaTable.hh:
+
+/usr/include/geant/G4OrderedTable.hh:
+
+/usr/include/geant/G4DataVector.hh:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/fstream:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/codecvt.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/cstdio:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/basic_file.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/c++io.h:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/bits/fstream.tcc:
+
+/usr/include/geant/G4DataVector.icc:
+
+/usr/include/geant/G4ElementVector.hh:
+
+/usr/include/geant/G4MaterialTable.hh:
+
+/usr/include/geant/G4Step.hh:
+
+/usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/iomanip:
+
+/usr/include/geant/G4StepPoint.hh:
+
+/usr/include/geant/G4SteppingControl.hh:
+
+/usr/include/geant/G4StepStatus.hh:
+
+/usr/include/geant/G4StepPoint.icc:
+
+/usr/include/geant/G4TrackVector.hh:
+
+/usr/include/geant/G4Step.icc:
+
+/usr/include/geant/G4Track.icc:
+
+/usr/include/geant/G4TrackStack.hh:
+
+/usr/include/geant/G4TrajectoryContainer.hh:
+
+/usr/include/geant/G4VTrajectory.hh:
+
+/usr/include/geant/G4PrimaryTransformer.hh:
+
+/usr/include/geant/G4ParticleTable.hh:
+
+/usr/include/geant/G4ParticleTableIterator.hh:
+
+/usr/include/geant/G4ParticleTable.icc:
+
+/usr/include/geant/G4TrackingManager.hh:
+
+/usr/include/geant/G4SteppingManager.hh:
+
+/usr/include/geant/Randomize.hh:
+
+/usr/include/CLHEP/Random/Randomize.h:
+
+/usr/include/CLHEP/Random/defs.h:
+
+/usr/include/CLHEP/Random/DRand48Engine.h:
+
+/usr/include/CLHEP/Random/RandomEngine.h:
+
+/usr/include/CLHEP/Random/RandomEngine.icc:
+
+/usr/include/CLHEP/Random/DualRand.h:
+
+/usr/include/CLHEP/Random/Hurd160Engine.h:
+
+/usr/include/CLHEP/Random/Hurd288Engine.h:
+
+/usr/include/CLHEP/Random/JamesRandom.h:
+
+/usr/include/CLHEP/Random/MTwistEngine.h:
+
+/usr/include/CLHEP/Random/RandEngine.h:
+
+/usr/include/CLHEP/Random/RanecuEngine.h:
+
+/usr/include/CLHEP/Random/RanluxEngine.h:
+
+/usr/include/CLHEP/Random/Ranlux64Engine.h:
+
+/usr/include/CLHEP/Random/RanshiEngine.h:
+
+/usr/include/CLHEP/Random/TripleRand.h:
+
+/usr/include/CLHEP/Random/RandBinomial.h:
+
+/usr/include/CLHEP/Random/Random.h:
+
+/usr/include/CLHEP/Random/Random.icc:
+
+/usr/include/CLHEP/Random/RandBinomial.icc:
+
+/usr/include/CLHEP/Random/RandBreitWigner.h:
+
+/usr/include/CLHEP/Random/RandFlat.h:
+
+/usr/include/CLHEP/Random/RandFlat.icc:
+
+/usr/include/CLHEP/Random/RandBreitWigner.icc:
+
+/usr/include/CLHEP/Random/RandChiSquare.h:
+
+/usr/include/CLHEP/Random/RandChiSquare.icc:
+
+/usr/include/CLHEP/Random/RandExponential.h:
+
+/usr/include/CLHEP/Random/RandExponential.icc:
+
+/usr/include/CLHEP/Random/RandBit.h:
+
+/usr/include/CLHEP/Random/RandBit.icc:
+
+/usr/include/CLHEP/Random/RandGamma.h:
+
+/usr/include/CLHEP/Random/RandGamma.icc:
+
+/usr/include/CLHEP/Random/RandGauss.h:
+
+/usr/include/CLHEP/Random/RandGauss.icc:
+
+/usr/include/CLHEP/Random/RandGaussQ.h:
+
+/usr/include/CLHEP/Random/RandGaussQ.icc:
+
+/usr/include/CLHEP/Random/RandGaussT.h:
+
+/usr/include/CLHEP/Random/Stat.h:
+
+/usr/include/CLHEP/Random/RandGaussT.icc:
+
+/usr/include/CLHEP/Random/RandGeneral.h:
+
+/usr/include/CLHEP/Random/RandGeneral.icc:
+
+/usr/include/CLHEP/Random/RandLandau.h:
+
+/usr/include/CLHEP/Random/RandLandau.icc:
+
+/usr/include/CLHEP/Random/RandPoissonQ.h:
+
+/usr/include/CLHEP/Random/RandPoisson.h:
+
+/usr/include/CLHEP/Random/RandPoisson.icc:
+
+/usr/include/CLHEP/Random/RandPoissonQ.icc:
+
+/usr/include/CLHEP/Random/RandPoissonT.h:
+
+/usr/include/CLHEP/Random/RandPoissonT.icc:
+
+/usr/include/CLHEP/Random/RandStudentT.h:
+
+/usr/include/CLHEP/Random/RandStudentT.icc:
+
+/usr/include/geant/G4Navigator.hh:
+
+/usr/include/geant/G4AffineTransform.hh:
+
+/usr/include/geant/G4AffineTransform.icc:
+
+/usr/include/geant/G4GRSVolume.hh:
+
+/usr/include/geant/G4GRSVolume.icc:
+
+/usr/include/geant/G4GRSSolid.hh:
+
+/usr/include/geant/G4GRSSolid.icc:
+
+/usr/include/geant/G4TouchableHistoryHandle.hh:
+
+/usr/include/geant/G4TouchableHistory.hh:
+
+/usr/include/geant/G4NavigationHistory.hh:
+
+/usr/include/geant/G4NavigationLevel.hh:
+
+/usr/include/geant/G4NavigationLevelRep.hh:
+
+/usr/include/geant/G4NavigationLevelRep.icc:
+
+/usr/include/geant/G4NavigationLevel.icc:
+
+/usr/include/geant/G4NavigationHistory.icc:
+
+/usr/include/geant/G4TouchableHistory.icc:
+
+/usr/include/geant/G4NormalNavigation.hh:
+
+/usr/include/geant/G4VSolid.hh:
+
+/usr/include/geant/G4VSolid.icc:
+
+/usr/include/geant/G4AuxiliaryNavServices.hh:
+
+/usr/include/geant/G4AuxiliaryNavServices.icc:
+
+/usr/include/geant/G4NormalNavigation.icc:
+
+/usr/include/geant/G4VoxelNavigation.hh:
+
+/usr/include/geant/G4BlockingList.hh:
+
+/usr/include/geant/G4BlockingList.icc:
+
+/usr/include/geant/G4SmartVoxelProxy.hh:
+
+/usr/include/geant/G4SmartVoxelProxy.icc:
+
+/usr/include/geant/G4SmartVoxelNode.hh:
+
+/usr/include/geant/G4SmartVoxelNode.icc:
+
+/usr/include/geant/G4SmartVoxelHeader.hh:
+
+/usr/include/geant/G4SmartVoxelHeader.icc:
+
+/usr/include/geant/G4VoxelNavigation.icc:
+
+/usr/include/geant/G4ParameterisedNavigation.hh:
+
+/usr/include/geant/G4VPVParameterisation.hh:
+
+/usr/include/geant/G4VVolumeMaterialScanner.hh:
+
+/usr/include/geant/G4ParameterisedNavigation.icc:
+
+/usr/include/geant/G4ReplicaNavigation.hh:
+
+/usr/include/geant/G4ReplicaNavigation.icc:
+
+/usr/include/geant/G4RegularNavigation.hh:
+
+/usr/include/geant/G4Navigator.icc:
+
+/usr/include/geant/G4ProcessManager.hh:
+
+/usr/include/geant/G4VProcess.hh:
+
+/usr/include/geant/G4PhysicsTable.hh:
+
+/usr/include/geant/G4PhysicsVector.hh:
+
+/usr/include/geant/G4PhysicsVectorType.hh:
+
+/usr/include/geant/G4PhysicsVector.icc:
+
+/usr/include/geant/G4PhysicsTable.icc:
+
+/usr/include/geant/G4VParticleChange.hh:
+
+/usr/include/geant/G4TrackFastVector.hh:
+
+/usr/include/geant/G4FastVector.hh:
+
+/usr/include/geant/G4VParticleChange.icc:
+
+/usr/include/geant/G4ForceCondition.hh:
+
+/usr/include/geant/G4GPILSelection.hh:
+
+/usr/include/geant/G4ParticleChange.hh:
+
+/usr/include/geant/G4ParticleChange.icc:
+
+/usr/include/geant/G4ProcessType.hh:
+
+/usr/include/geant/G4ProcessVector.hh:
+
+/usr/include/geant/G4ProcessVector.icc:
+
+/usr/include/geant/G4ProcessManager.icc:
+
+/usr/include/geant/G4ProcessAttribute.hh:
+
+/usr/include/geant/G4UserSteppingAction.hh:
+
+/usr/include/geant/G4VSteppingVerbose.hh:
+
+/usr/include/geant/G4TrackingMessenger.hh:
+
+/usr/include/geant/G4UImessenger.hh:
+
+/usr/include/geant/G4UserTrackingAction.hh:
+
+/usr/include/geant/G4Event.hh:
+
+/usr/include/geant/G4PrimaryVertex.hh:
+
+/usr/include/geant/G4HCofThisEvent.hh:
+
+/usr/include/geant/G4DCofThisEvent.hh:
+
+/usr/include/geant/G4VUserEventInformation.hh:
+
+/usr/include/geant/G4SDManager.hh:
+
+/usr/include/geant/G4SDStructure.hh:
+
+/usr/include/geant/G4VSensitiveDetector.hh:
+
+/usr/include/geant/G4VHit.hh:
+
+/usr/include/geant/G4VReadOutGeometry.hh:
+
+/usr/include/geant/G4SensitiveVolumeList.hh:
+
+/usr/include/geant/G4CollectionNameVector.hh:
+
+/usr/include/geant/G4VSDFilter.hh:
+
+/usr/include/geant/G4HCtable.hh:
+
+/usr/include/geant/G4DigiManager.hh:
+
+/usr/include/geant/G4VDigitizerModule.hh:
+
+/usr/include/geant/G4DCtable.hh:
+
+/usr/include/geant/G4Poisson.hh:
+
+/usr/include/geant/G4ios.hh:
