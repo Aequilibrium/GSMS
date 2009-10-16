@@ -538,9 +538,9 @@ Run.lo: Run.cpp Run.h ../../src/config/Config.h \
  /usr/include/boost/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp \
- ../../src/typedefs.h /usr/include/geant/G4Run.hh \
- /usr/include/geant/globals.hh /usr/include/geant/G4THitsMap.hh \
- /usr/include/geant/G4THitsCollection.hh \
+ ../../src/typedefs.h ../../src/config/Exception.h \
+ /usr/include/geant/G4Run.hh /usr/include/geant/globals.hh \
+ /usr/include/geant/G4THitsMap.hh /usr/include/geant/G4THitsCollection.hh \
  /usr/include/geant/G4VHitsCollection.hh \
  /usr/include/geant/G4Allocator.hh /usr/include/geant/G4AllocatorPool.hh \
  /usr/include/geant/G4Event.hh /usr/include/geant/G4PrimaryVertex.hh \
@@ -1821,6 +1821,8 @@ Run.h:
 /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp:
 
 ../../src/typedefs.h:
+
+../../src/config/Exception.h:
 
 /usr/include/geant/G4Run.hh:
 

@@ -28,3 +28,17 @@ unsigned int	GSMS::Job::save(std::ofstream* stream)
 	boost::archive::xml_oarchive out(*stream);
 	out << BOOST_SERIALIZATION_NVP(pJob);
 }
+
+GSMS::Exposition&	GSMS::Job::get_active_exposition() {
+
+	if(!m_expositions.size())
+		throw __EXCEPTION(_E_EMPTY_CONTAINER);
+	return	m_expositions[0];
+}
+
+GSMS::Exposition*	GSMS::Job::get_active_exposition_ptr() {
+
+	if(!m_expositions.size())
+		throw __EXCEPTION(_E_EMPTY_CONTAINER);
+	return	&m_expositions[0];
+}

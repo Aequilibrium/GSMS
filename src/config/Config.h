@@ -43,6 +43,7 @@
 #include <boost/archive/xml_iarchive.hpp>
 
 #include "typedefs.h"
+#include "config/Exception.h"
 
 /*!\namespace GSMS
  * \brief Gamma-Scanner Modelling Suite namespace
@@ -140,6 +141,42 @@ public:
 	 * \brief default destructor
 	 */
 virtual	~LogObjConfig() {}
+
+	/*!\fn float get_x()
+	 * \brief coordinate getter
+	 * \return X coordinate
+	 */
+inline	float	get_x() {return m_x;}
+
+	/*!\fn float get_y()
+	 * \brief coordinate getter
+	 * \return Y coordinate
+	 */
+inline	float	get_y() {return m_y;}
+
+	/*!\fn float get_z()
+	 * \brief coordinate getter
+	 * \return Z coordinate
+	 */
+inline	float	get_z() {return m_z;}
+
+	/*!\fn void set_x(float x)
+	 * \brief coordinate setter
+	 * \param x X coordinate
+	 */
+inline	void	set_x(float x) {m_x = x;}
+
+	/*!\fn void set_y(float y)
+	 * \brief coordinate setter
+	 * \param y Y coordinate
+	 */
+inline	void	set_y(float y) {m_y = y;}
+
+	/*!\fn void set_z(float z)
+	 * \brief coordinate setter
+	 * \param z Z coordinate
+	 */
+inline	void	set_z(float z) {m_z = z;}
 
 	/*!\fn unsigned int save(std::ofstream* stream)
 	 * \brief self-serializer

@@ -17,50 +17,15 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
-#include "RunAction.h"
-#include "detector/Digitizer.h"
-#include "detector/Digi.h"
-// 
-#include <geant/G4DigiManager.hh>
 
-#include "config/GSMS.h"
+#include "Waypoint.h"
+#include <sys/stat.h>
+#include <sys/types.h>
 
-GSMS::RunAction::RunAction()
+
+unsigned int	GSMS::Waypoint::save(std::ofstream* stream)
 {
-}
-
-GSMS::RunAction::~RunAction()
-{
-}
-
-G4Run*	GSMS::RunAction::GenerateRun()
-{
-	return new Run;
-}
-
-void	GSMS::RunAction::BeginOfRunAction(const G4Run*)
-{
-}
-
-void	GSMS::RunAction::EndOfRunAction(const G4Run* aRun)
-{
-	Run*	theRun = (Run*)aRun;
-
-	std::vector<G4double>	spectrum;
-	for(int i=0; i<1024; i++)
-		spectrum.push_back(0.);
-
-	for(int i=0; i< theRun->get_size(); i++)
-	{
-		G4double time = theRun->get_time(i);
-		G4double ene = theRun->get_ene(i);
-		G4int	chan = theRun->get_chan(i);
-		spectrum[chan]++;
-	}
-
-	//int		discrete = GSMS::get_job().get_active_exposition().get_next_active_discrete();
-	//std::cout << "DISCRETE IS: "<< discrete << std::endl;
-	SpectraIterator	itr = GSMS::get_job().get_active_exposition().get_spectrum_iterator();
-	(*itr).second.push_back(spectrum);
-
+	Waypoint*	pWaypoint = this;
+	boost::archive::xml_oarchive out(*stream);
+	out << BOOST_SERIALIZATION_NVP(pWaypoint);
 }

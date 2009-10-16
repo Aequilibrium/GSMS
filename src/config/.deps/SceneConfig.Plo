@@ -538,10 +538,11 @@ SceneConfig.lo: SceneConfig.cpp SceneConfig.h Config.h \
  /usr/include/boost/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp \
- ../../src/typedefs.h /usr/include/geant/G4LogicalVolume.hh \
- /usr/include/geant/G4Region.hh /usr/include/geant/G4Region.icc \
- /usr/include/geant/G4VPhysicalVolume.hh /usr/include/geant/geomdefs.hh \
- /usr/include/geant/globals.hh /usr/include/geant/G4RotationMatrix.hh \
+ ../../src/typedefs.h ../../src/config/Exception.h \
+ /usr/include/geant/G4LogicalVolume.hh /usr/include/geant/G4Region.hh \
+ /usr/include/geant/G4Region.icc /usr/include/geant/G4VPhysicalVolume.hh \
+ /usr/include/geant/geomdefs.hh /usr/include/geant/globals.hh \
+ /usr/include/geant/G4RotationMatrix.hh \
  /usr/include/geant/G4ThreeVector.hh \
  /usr/include/CLHEP/Vector/ThreeVector.h /usr/include/CLHEP/Vector/defs.h \
  /usr/include/CLHEP/Vector/ThreeVector.icc \
@@ -576,14 +577,13 @@ SceneConfig.lo: SceneConfig.cpp SceneConfig.h Config.h \
  /usr/include/CLHEP/Geometry/Normal3D.h \
  /usr/include/geant/G4ThreeVector.hh ../../src/config/GSMS.h \
  ../../src/config/MaskConfig.h ../../src/config/Config.h \
- /usr/include/geant/G4VPVParameterisation.hh \
- /usr/include/geant/G4VVolumeMaterialScanner.hh \
  /usr/include/geant/G4AssemblyVolume.hh \
  /usr/include/geant/G4AssemblyTriplet.hh \
  /usr/include/geant/G4AssemblyTriplet.icc \
  /usr/include/geant/G4AssemblyVolume.icc ../../src/config/GlobalConfig.h \
- ../../src/config/Job.h ../../src/generator/Source.h \
- ../../src/config/Config.h /usr/include/geant/G4SingleParticleSource.hh \
+ ../../src/config/Job.h ../../src/config/Config.h \
+ ../../src/generator/Source.h \
+ /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4VPrimaryGenerator.hh \
  /usr/include/geant/G4ParticleMomentum.hh \
  /usr/include/geant/G4ParticleDefinition.hh \
@@ -624,6 +624,7 @@ SceneConfig.lo: SceneConfig.cpp SceneConfig.h Config.h \
  /usr/include/geant/G4VoxelNavigation.icc \
  /usr/include/geant/G4ParameterisedNavigation.hh \
  /usr/include/geant/G4VPVParameterisation.hh \
+ /usr/include/geant/G4VVolumeMaterialScanner.hh \
  /usr/include/geant/G4ParameterisedNavigation.icc \
  /usr/include/geant/G4ReplicaNavigation.hh \
  /usr/include/geant/G4ReplicaNavigation.icc \
@@ -650,7 +651,8 @@ SceneConfig.lo: SceneConfig.cpp SceneConfig.h Config.h \
  /usr/include/geant/G4VUserEventInformation.hh \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4GeneralParticleSourceMessenger.hh \
- /usr/include/geant/G4UImessenger.hh ../../src/config/DetectorConfig.h \
+ /usr/include/geant/G4UImessenger.hh ../../src/config/Exposition.h \
+ ../../src/config/Waypoint.h ../../src/config/DetectorConfig.h \
  ../../src/config/HullConfig.h ../../src/config/SceneConfig.h \
  /usr/include/geant/G4RunManager.hh \
  /usr/include/geant/G4RunManagerKernel.hh \
@@ -2239,6 +2241,8 @@ Config.h:
 
 ../../src/typedefs.h:
 
+../../src/config/Exception.h:
+
 /usr/include/geant/G4LogicalVolume.hh:
 
 /usr/include/geant/G4Region.hh:
@@ -2339,10 +2343,6 @@ Config.h:
 
 ../../src/config/Config.h:
 
-/usr/include/geant/G4VPVParameterisation.hh:
-
-/usr/include/geant/G4VVolumeMaterialScanner.hh:
-
 /usr/include/geant/G4AssemblyVolume.hh:
 
 /usr/include/geant/G4AssemblyTriplet.hh:
@@ -2355,9 +2355,9 @@ Config.h:
 
 ../../src/config/Job.h:
 
-../../src/generator/Source.h:
-
 ../../src/config/Config.h:
+
+../../src/generator/Source.h:
 
 /usr/include/geant/G4SingleParticleSource.hh:
 
@@ -2449,6 +2449,8 @@ Config.h:
 
 /usr/include/geant/G4VPVParameterisation.hh:
 
+/usr/include/geant/G4VVolumeMaterialScanner.hh:
+
 /usr/include/geant/G4ParameterisedNavigation.icc:
 
 /usr/include/geant/G4ReplicaNavigation.hh:
@@ -2504,6 +2506,10 @@ Config.h:
 /usr/include/geant/G4GeneralParticleSourceMessenger.hh:
 
 /usr/include/geant/G4UImessenger.hh:
+
+../../src/config/Exposition.h:
+
+../../src/config/Waypoint.h:
 
 ../../src/config/DetectorConfig.h:
 

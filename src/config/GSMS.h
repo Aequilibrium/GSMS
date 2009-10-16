@@ -160,6 +160,10 @@ static	unsigned int	imprintMask(G4VPhysicalVolume* world = NULL) {return m_mask.
 static	unsigned int	getTime(G4double* time) {return m_global.getTime(time);}
 static	unsigned int	setTime(G4double* time) {return m_global.setTime(time);}
 
+	/*!\fn Job&	get_job() {return m_job;}
+	 * \brief get job instance pointer
+	 * \return job object
+	 */
 static	Job&	get_job() {return m_job;}
 
 };

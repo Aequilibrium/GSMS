@@ -708,8 +708,7 @@ Geometry.lo: Geometry.cpp Geometry.h ../../src/typedefs.h \
  /usr/include/boost/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp \
- /usr/include/geant/G4VPVParameterisation.hh \
- /usr/include/geant/G4AssemblyVolume.hh \
+ ../../src/config/Exception.h /usr/include/geant/G4AssemblyVolume.hh \
  /usr/include/geant/G4Transform3D.hh \
  /usr/include/CLHEP/Geometry/Transform3D.h \
  /usr/include/CLHEP/Geometry/defs.h \
@@ -721,8 +720,8 @@ Geometry.lo: Geometry.cpp Geometry.h ../../src/typedefs.h \
  /usr/include/geant/G4AssemblyTriplet.hh \
  /usr/include/geant/G4AssemblyTriplet.icc \
  /usr/include/geant/G4AssemblyVolume.icc ../../src/config/GlobalConfig.h \
- ../../src/config/Job.h ../../src/generator/Source.h \
- ../../src/config/Config.h /usr/include/geant/G4ThreeVector.hh \
+ ../../src/config/Job.h ../../src/config/Config.h \
+ ../../src/generator/Source.h /usr/include/geant/G4ThreeVector.hh \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4VPrimaryGenerator.hh \
  /usr/include/geant/G4SPSPosDistribution.hh \
@@ -743,7 +742,8 @@ Geometry.lo: Geometry.cpp Geometry.h ../../src/typedefs.h \
  /usr/include/geant/G4VUserEventInformation.hh \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4GeneralParticleSourceMessenger.hh \
- /usr/include/geant/G4UImessenger.hh ../../src/config/DetectorConfig.h \
+ /usr/include/geant/G4UImessenger.hh ../../src/config/Exposition.h \
+ ../../src/config/Waypoint.h ../../src/config/DetectorConfig.h \
  /usr/include/geant/G4VPhysicalVolume.hh ../../src/config/HullConfig.h \
  ../../src/config/SceneConfig.h /usr/include/geant/G4LogicalVolume.hh \
  /usr/include/geant/G4RunManager.hh \
@@ -2675,7 +2675,7 @@ Geometry.h:
 
 /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp:
 
-/usr/include/geant/G4VPVParameterisation.hh:
+../../src/config/Exception.h:
 
 /usr/include/geant/G4AssemblyVolume.hh:
 
@@ -2705,9 +2705,9 @@ Geometry.h:
 
 ../../src/config/Job.h:
 
-../../src/generator/Source.h:
-
 ../../src/config/Config.h:
+
+../../src/generator/Source.h:
 
 /usr/include/geant/G4ThreeVector.hh:
 
@@ -2754,6 +2754,10 @@ Geometry.h:
 /usr/include/geant/G4GeneralParticleSourceMessenger.hh:
 
 /usr/include/geant/G4UImessenger.hh:
+
+../../src/config/Exposition.h:
+
+../../src/config/Waypoint.h:
 
 ../../src/config/DetectorConfig.h:
 

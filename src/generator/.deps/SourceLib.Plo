@@ -539,9 +539,9 @@ SourceLib.lo: SourceLib.cpp SourceLib.h ../../src/generator/Source.h \
  /usr/include/boost/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp \
- ../../src/typedefs.h /usr/include/geant/G4ThreeVector.hh \
- /usr/include/geant/globals.hh /usr/include/CLHEP/Vector/ThreeVector.h \
- /usr/include/CLHEP/Vector/defs.h \
+ ../../src/typedefs.h ../../src/config/Exception.h \
+ /usr/include/geant/G4ThreeVector.hh /usr/include/geant/globals.hh \
+ /usr/include/CLHEP/Vector/ThreeVector.h /usr/include/CLHEP/Vector/defs.h \
  /usr/include/CLHEP/Vector/ThreeVector.icc \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4VPrimaryGenerator.hh \
@@ -1830,6 +1830,8 @@ SourceLib.h:
 /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp:
 
 ../../src/typedefs.h:
+
+../../src/config/Exception.h:
 
 /usr/include/geant/G4ThreeVector.hh:
 

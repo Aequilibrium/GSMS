@@ -26,6 +26,8 @@
 #include <geant/G4UIterminal.hh>
 #include <geant/G4UItcsh.hh>
 
+#include <geant/G4RunManager.hh>
+
 #include "action/RunAction.h"
 #include "action/EventAction.h"
 
@@ -82,7 +84,6 @@ unsigned int	GSMS::GSMS::initRunManager()
 //		G4UImanager*	ui = G4UImanager::GetUIpointer();
 //		G4VisManager*	vis = new G4VisExecutive;
 //		vis->Initialize();
-//		ui->ApplyCommand("/control/execute vis.mac");
 //		ui->ApplyCommand("/tracking/verbose 1");
 
 //		G4UIsession*	session = NULL;
@@ -92,14 +93,15 @@ unsigned int	GSMS::GSMS::initRunManager()
 
 		Source*	src = util::SourceLib::create_source("Cs137", 1, G4ThreeVector(1.*m, 1.*m, 0.));
 		if(src) m_job.push_source(*src);
+		src = util::SourceLib::create_source("Co57", 1, G4ThreeVector(1.*m, -1.*m, 0.));
+		if(src) m_job.push_source(*src);
+
 
 //		src = util::SourceLib::create_source("Co57", 1, G4ThreeVector(1.*m, 0., 0.));
 //		if(src) m_job.push_source(*src);
 
 //		src = util::SourceLib::create_source("Co60", 1, G4ThreeVector(0., -1.*m, 0.));
 //		if(src) m_job.push_source(*src);		
-
-		serialize("text.gz");
 
 		int	discretes = 217;
 
@@ -108,12 +110,16 @@ unsigned int	GSMS::GSMS::initRunManager()
 		G4double	ltime = ((G4double)i / discretes)*10*2*pi;
 		setTime(&ltime);
 		if(i)
-			mp_geometry->Update();
+			if( !mp_geometry->Update() )
+			std::cerr << "FAILED" << std::endl;
 			mp_generator->Update();
-//		if(	__SUCCEEDED(setTime(&ltime)) &&
-//			__SUCCEEDED(imprintMask()))
-				mp_runmanager->BeamOn(12000);
+
+//		ui->ApplyCommand("/control/execute vis.mac");
+		mp_runmanager->GeometryHasBeenModified();
+		mp_runmanager->BeamOn(100);
+		serialize("text.gz");
 	}
+
 //	catch(...)
 //	{
 //		return GSMS_ERR;

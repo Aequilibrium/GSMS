@@ -31,7 +31,7 @@ namespace GSMS {
 /*!\class Waypoint
  * \brief Waypoint configuration
  */
-class Waypoint : public PhysObjConfig, G4ThreeVector
+class Waypoint : public LogObjConfig
 {
 	friend class boost::serialization::access;
 
@@ -43,9 +43,7 @@ class Waypoint : public PhysObjConfig, G4ThreeVector
 	template<class Archive>
 	void serialize(Archive & ar, const unsigned int version)
 	{
-		ar	& BOOST_SERIALIZATION_NVP(X)
-			& BOOST_SERIALIZATION_NVP(Y)
-			& BOOST_SERIALIZATION_NVP(Z)
+		ar	& BOOST_SERIALIZATION_BASE_OBJECT_NVP(LogObjConfig)
 			& BOOST_SERIALIZATION_NVP(m_stance)
 			& BOOST_SERIALIZATION_NVP(m_duration);
 	}
@@ -65,8 +63,8 @@ public:
 	/*!\fn Waypoint()
 	 * \brief Default constructor
 	 */
-	Waypoint() :
-		m_stance("Idle"), m_duration(0.0), X(0.0), Y(0.0), Z(0.0)
+	Waypoint() : LogObjConfig(),
+		m_stance("Idle"), m_duration(0.0)
 		{m_type = "Waypoint";
 			}
 
@@ -77,10 +75,10 @@ public:
 	 * \param position coordinates
 	 */
 	Waypoint(std::string stance, G4float duration, G4ThreeVector position) :
-		G4ThreeVector(position),
+		LogObjConfig(),
 		m_stance(stance),
 		m_duration(duration)
-		{m_type = "Waypoint";}
+		{m_type = "Waypoint"; m_x = position.getX(), m_y = position.getY(), m_z = position.getZ();}
 
 	/*!\fn ~Waypoint()
 	 * \brief Default destructor
@@ -104,7 +102,7 @@ inline	G4float get_duration() {return m_duration;}
 	 * \brief set duration of the activity
 	 * \param G4float new duration
 	 */
-inline	void set_activity(G4float activity) {m_duration = duration;}
+inline	void set_duration(G4float duration) {m_duration = duration;}
 
 	/*!\fn std::string	get_stance()
 	 * \brief obtain kind of activity
@@ -122,13 +120,13 @@ inline	void set_stance(std::string stance) {m_stance = stance;}
 	 * \brief obtain coords
 	 * \return coords
 	 */
-inline	G4ThreeVector get_coords() {return G4ThreeVector(X, Y, Z);}
+inline	G4ThreeVector get_coords() {return G4ThreeVector(m_x, m_y, m_z);}
 
 	/*!\fn float	set_coords()
 	 * \brief set coords
 	 * \param G4ThreeVector new coords
 	 */
-inline	void set_coords(G4ThreeVector coords) {X = coords.X, Y = coords.Y, Z = coords.Z;}
+inline	void set_coords(G4ThreeVector coords) {set_x(coords.getX()), set_y(coords.getY()), set_z(coords.getZ());}
 
 };
 

@@ -32,7 +32,7 @@ namespace GSMS {
 /*!\class Source
  * \brief Source configuration
  */
-class Source : public PhysObjConfig
+class Source : public LogObjConfig
 {
 	friend class boost::serialization::access;
 
@@ -44,12 +44,9 @@ class Source : public PhysObjConfig
 	template<class Archive>
 	void serialize(Archive & ar, const unsigned int version)
 	{
-//		ar	& BOOST_SERIALIZATION_BASE_OBJECT_NVP(PhysObjConfig)
-		ar	& BOOST_SERIALIZATION_NVP(m_activity)
+		ar	& BOOST_SERIALIZATION_BASE_OBJECT_NVP(LogObjConfig)
+			& BOOST_SERIALIZATION_NVP(m_activity)
 			& BOOST_SERIALIZATION_NVP(m_name)
-			& BOOST_SERIALIZATION_NVP(m_X)
-			& BOOST_SERIALIZATION_NVP(m_Y)
-			& BOOST_SERIALIZATION_NVP(m_Z)
 			& BOOST_SERIALIZATION_NVP(m_gamma)
 			& BOOST_SERIALIZATION_NVP(m_beta)
 			& BOOST_SERIALIZATION_NVP(m_electron);
@@ -65,22 +62,6 @@ protected:
 	 * \brief source name
 	 */
 	std::string	m_name;
-
-
-	/*!\var m_X
-	 * \brief X coordinate
-	 */
-	float	m_X;
-
-	/*!\var m_Y
-	 * \brief Y coordinate
-	 */
-	float	m_Y;
-
-	/*!\var m_Z
-	 * \brief Z coordinate
-	 */
-	float	m_Z;
 
 	/*!\var m_gamma
 	 * \brief gamma spectrum with (Energy;Output) pair
@@ -107,7 +88,8 @@ public:
 	 * \brief Default constructor
 	 */
 	Source() :
-		m_activity(1.0), m_name("undefined"), m_X(0.0), m_Y(0.0), m_Z(0.0)
+		LogObjConfig(),
+		m_activity(1.0), m_name("undefined")
 		{m_type = "SourceConfig"; //m_gamma.push_backinsert(std::pair<G4float,G4float>(1.0,100));}
 			}
 
@@ -120,12 +102,13 @@ public:
 	 * \param Z Z coord
 	 */
 	Source(G4double activity, std::string name, G4ThreeVector coords) :
+		LogObjConfig(),
 		m_activity(activity),
-		m_name(name),
-		m_X(coords.getX()),
-		m_Y(coords.getY()),
-		m_Z(coords.getZ())
-		{m_type = "Source";}
+		m_name(name)
+		{m_type = "Source";
+		set_x(coords.getX()),
+		set_y(coords.getY()),
+		set_z(coords.getZ());}
 
 	/*!\fn ~Source()
 	 * \brief Default destructor
@@ -189,13 +172,13 @@ inline	void set_name(std::string name) {m_name = name;}
 	 * \brief obtain source coords
 	 * \return coords
 	 */
-inline	G4ThreeVector get_coords() {return G4ThreeVector(m_X, m_Y, m_Z);}
+inline	G4ThreeVector get_coords() {return G4ThreeVector(m_x, m_y, m_z);}
 
 	/*!\fn float	set_coords()
 	 * \brief set source coords
 	 * \param G4ThreeVector new coords
 	 */
-inline	void set_coords(G4ThreeVector coords) {m_X = coords.getX(), m_Y = coords.getY(), m_Z = coords.getZ();}
+inline	void set_coords(G4ThreeVector coords) {m_x = coords.getX(), m_y = coords.getY(), m_z = coords.getZ();}
 
 	/*!\fn int	push_gamma()
 	 * \brief add gamma line

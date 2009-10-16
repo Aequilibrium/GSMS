@@ -25,7 +25,7 @@
 
 #include "Config.h"
 
-#include <geant/G4VPVParameterisation.hh>
+//#include <geant/G4VPVParameterisation.hh>
 #include <geant/G4AssemblyVolume.hh>
 
 class	G4Box;
@@ -133,6 +133,8 @@ protected:
 
 	G4AssemblyVolume*	m_assembly;
 
+	std::vector<G4VPhysicalVolume*>	m_mask;
+
 public:
 	/*!\fn MaskConfig()
 	 * \brief Default constructor
@@ -140,7 +142,7 @@ public:
 	MaskConfig() :	m_evector(0x121d47b6),
 		m_ecount(31),
 		m_speed(0.1),
-		m_radius(23.*cm),
+		m_radius(24.*cm),
 		m_ewidth(50.*mm),
 		m_eheight(30.*cm),
 		m_ethick(20.*mm),
@@ -156,7 +158,7 @@ public:
 	MaskConfig(unsigned char ecount, unsigned_int64 evector) :
 		m_evector(evector),
 		m_ecount(ecount),
-		m_radius(23.*cm),
+		m_radius(24.*cm),
 		m_speed(0.1),
 		m_ewidth(50.*mm),
 		m_eheight(30.*cm),
@@ -204,11 +206,13 @@ virtual unsigned int	save(std::ofstream* stream);
 	unsigned int	setEType(std::string*	etype);
 };
 
+/*
 class MaskElement : public G4VPVParameterisation
 {
 		MaskConfig*	m_config;
 public:
 		MaskElement(MaskConfig* config) : m_config(config) {}
+
 
 void		ComputeTransformation(
 	const	G4int	copyNo,
@@ -226,7 +230,9 @@ G4Material*	ComputeMaterial(
 		G4VPhysicalVolume*,
 		const G4VTouchable*	parentTouch=0
 		);
+
 };
+*/
 
 }; /*namespace GSMS*/
 

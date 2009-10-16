@@ -189,6 +189,7 @@ unsigned int	GSMS::DetectorConfig::imprintDetector(G4VPhysicalVolume* wptr)
 
 	G4String filterName, particleName;
   
+/*
 	G4SDParticleFilter* gammaFilter = 
 		new G4SDParticleFilter(filterName="gammaFilter",particleName="gamma");
 	G4SDParticleFilter* electronFilter = 
@@ -198,23 +199,18 @@ unsigned int	GSMS::DetectorConfig::imprintDetector(G4VPhysicalVolume* wptr)
 	G4SDParticleFilter* epFilter = new G4SDParticleFilter(filterName="epFilter");
 	epFilter->add(particleName="e-");
 	epFilter->add(particleName="e+");
+*/
     
     
-	// Loop counter j = 0 : absorber
-	//                = 1 : gap
 	G4String detName = "crystal";
 	G4MultiFunctionalDetector* det = new G4MultiFunctionalDetector(detName);
   
-	//  The second argument in each primitive means the "level" of geometrical hierarchy,
-	// the copy number of that level is used as the key of the G4THitsMap.
-	//  For absorber (j = 0), the copy number of its own physical volume is used.
-	//  For gap (j = 1), the copy number of its mother physical volume is used, since there
-	// is only one physical volume of gap is placed with respect to its mother.
 	G4VPrimitiveScorer* primitive;
 		primitive = new G4PSEnergyDeposit("eDep");
 		//primitive->SetFilter(gammaFilter);
 		det->RegisterPrimitive(primitive);
 
+/*
 	primitive = new G4PSNofSecondary("nGamma");
 		primitive->SetFilter(gammaFilter);
 		det->RegisterPrimitive(primitive);
@@ -246,7 +242,8 @@ unsigned int	GSMS::DetectorConfig::imprintDetector(G4VPhysicalVolume* wptr)
 	primitive = new G4PSNofStep("nStep");
 		primitive->SetFilter(epFilter); 
 		det->RegisterPrimitive(primitive);
-  
+*/  
+
 	G4SDManager::GetSDMpointer()->AddNewDetector(det);
 	crystal_log->SetSensitiveDetector(det);
 

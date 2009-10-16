@@ -632,11 +632,11 @@ Generator.lo: Generator.cpp Generator.h \
  /usr/include/boost/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp \
- ../../src/typedefs.h /usr/include/geant/G4ThreeVector.hh \
+ ../../src/typedefs.h ../../src/config/Exception.h \
+ /usr/include/geant/G4ThreeVector.hh \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4Gamma.hh ../../src/config/GSMS.h \
  ../../src/config/MaskConfig.h ../../src/config/Config.h \
- /usr/include/geant/G4VPVParameterisation.hh \
  /usr/include/geant/G4AssemblyVolume.hh \
  /usr/include/geant/G4Transform3D.hh \
  /usr/include/CLHEP/Geometry/Transform3D.h \
@@ -649,7 +649,8 @@ Generator.lo: Generator.cpp Generator.h \
  /usr/include/geant/G4AssemblyTriplet.hh \
  /usr/include/geant/G4AssemblyTriplet.icc \
  /usr/include/geant/G4AssemblyVolume.icc ../../src/config/GlobalConfig.h \
- ../../src/config/Job.h ../../src/config/DetectorConfig.h \
+ ../../src/config/Job.h ../../src/config/Exposition.h \
+ ../../src/config/Waypoint.h ../../src/config/DetectorConfig.h \
  /usr/include/geant/G4VPhysicalVolume.hh ../../src/config/HullConfig.h \
  ../../src/config/SceneConfig.h /usr/include/geant/G4LogicalVolume.hh \
  /usr/include/geant/G4RunManager.hh \
@@ -2447,6 +2448,8 @@ Generator.h:
 
 ../../src/typedefs.h:
 
+../../src/config/Exception.h:
+
 /usr/include/geant/G4ThreeVector.hh:
 
 /usr/include/geant/G4SingleParticleSource.hh:
@@ -2458,8 +2461,6 @@ Generator.h:
 ../../src/config/MaskConfig.h:
 
 ../../src/config/Config.h:
-
-/usr/include/geant/G4VPVParameterisation.hh:
 
 /usr/include/geant/G4AssemblyVolume.hh:
 
@@ -2488,6 +2489,10 @@ Generator.h:
 ../../src/config/GlobalConfig.h:
 
 ../../src/config/Job.h:
+
+../../src/config/Exposition.h:
+
+../../src/config/Waypoint.h:
 
 ../../src/config/DetectorConfig.h:
 

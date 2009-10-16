@@ -30,6 +30,9 @@
 
 #include "typedefs.h"
 
+#define	_E_OUT_OF_BOUND		2000L
+#define	_E_EMPTY_CONTAINER	2010L
+
 #define __EXCEPTION(x)		util::Exception(__FILE__,__FUNCTION__,__LINE__,x)
 #define __DB_EXCEPTION(x)	util::DatabaseException(__FILE__,__FUNCTION__,__LINE__,x)
 #define __MATH_EXCEPTION(x)	util::MathException(__FILE__,__FUNCTION__,__LINE__,x)

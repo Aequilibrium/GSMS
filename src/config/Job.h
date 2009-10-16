@@ -23,8 +23,9 @@
 #ifndef JOB_H
 #define JOB_H
 
-#include "Config.h"
+#include "config/Config.h"
 #include "generator/Source.h"
+#include "config/Exposition.h"
 
 namespace GSMS {
 /*!\class Job
@@ -43,7 +44,8 @@ class Job : public Config
 	{
 		ar	& BOOST_SERIALIZATION_BASE_OBJECT_NVP(Config)
 			& BOOST_SERIALIZATION_NVP(m_duration)
-			& BOOST_SERIALIZATION_NVP(m_sources);
+			& BOOST_SERIALIZATION_NVP(m_sources)
+			& BOOST_SERIALIZATION_NVP(m_expositions);
 	}
 
 protected:
@@ -57,6 +59,11 @@ protected:
 	 */
 	std::vector<Source>	m_sources;
 
+	/*!\var m_expositions
+	 * \brief expositions' list
+	 */
+	std::vector<Exposition>	m_expositions;
+
 public:
 	/*!\fn Job()
 	 * \brief Default constructor
@@ -66,6 +73,9 @@ public:
 		m_type = "Job";
 //		Source	src;
 //		m_sources.push_back(src);
+
+		Exposition	exposition;
+		m_expositions.push_back(exposition);
 	}
 
 	/*!\fn Job()
@@ -112,6 +122,43 @@ inline	unsigned int	get_source_count() {
 inline	void	push_source(Source&	source) {
 		m_sources.push_back(source);
 	}
+
+	/*!\fn std::vector<Exposition>::iterator	get_exposition_iterator()
+	 * \brief Expositions iterator
+	 * \return iterator over expositions vector
+	 */
+inline	std::vector<Exposition>::iterator	get_exposition_iterator() {
+		std::vector<Exposition>::iterator	it = m_expositions.begin();
+		return it;
+	}
+
+	/*!\fn unsigned int	get_exposition_count()
+	 * \brief Number of expositions
+	 * \return number of expositions
+	 */
+inline	unsigned int	get_exposition_count() {
+		return m_expositions.size();
+	}
+
+	/*!\fn void	push_exposition(Exposition&	exposition)
+	 * \brief Add exposition to the magazine
+	 * \param source instance of an exposition
+	 */
+inline	void	push_exposition(Exposition	exposition) {
+		m_expositions.push_back(exposition);
+	}
+
+	/*!\fn Exposition&	get_active_exposition()
+	 * \brief Obtain current (localtime-related) exposition
+	 * \return active exposition
+	 */
+	Exposition&	get_active_exposition();
+
+	/*!\fn Exposition*	get_active_exposition_ptr()
+	 * \brief Obtain current (localtime-related) exposition pointer
+	 * \return active exposition
+	 */
+	Exposition*	get_active_exposition_ptr();
 
 };
 

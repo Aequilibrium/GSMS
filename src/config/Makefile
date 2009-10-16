@@ -46,8 +46,8 @@ CONFIG_CLEAN_FILES =
 LTLIBRARIES = $(noinst_LTLIBRARIES)
 libconfig_la_DEPENDENCIES = $(top_builddir)/src/action/libaction.la
 am_libconfig_la_OBJECTS = Config.lo DetectorConfig.lo Exception.lo \
-	GSMS.lo GlobalConfig.lo HullConfig.lo Job.lo MaskConfig.lo \
-	SceneConfig.lo
+	Exposition.lo GSMS.lo GlobalConfig.lo HullConfig.lo Job.lo \
+	MaskConfig.lo SceneConfig.lo Waypoint.lo
 libconfig_la_OBJECTS = $(am_libconfig_la_OBJECTS)
 DEFAULT_INCLUDES = -I. -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
@@ -185,13 +185,15 @@ top_srcdir = ../..
 INCLUDES = -I$(top_srcdir)/src
 METASOURCES = AUTO
 noinst_LTLIBRARIES = libconfig.la
-libconfig_la_SOURCES = Config.cpp DetectorConfig.cpp Exception.cpp GSMS.cpp \
-	GlobalConfig.cpp HullConfig.cpp Job.cpp MaskConfig.cpp SceneConfig.cpp
+libconfig_la_SOURCES = Config.cpp DetectorConfig.cpp Exception.cpp \
+	Exposition.cpp GSMS.cpp GlobalConfig.cpp HullConfig.cpp Job.cpp MaskConfig.cpp \
+	SceneConfig.cpp Waypoint.cpp
 
 libconfig_la_LIBADD = $(top_builddir)/src/action/libaction.la
 noinst_HEADERS = Config.h DetectorConfig.h Exception.h GSMS.h GlobalConfig.h \
 	HullConfig.h Job.h MaskConfig.h SceneConfig.h Waypoint.h
 
+_SOURCES = Exposition.cpp Exposition.h Point.h
 all: all-am
 
 .SUFFIXES:
@@ -246,12 +248,14 @@ distclean-compile:
 include ./$(DEPDIR)/Config.Plo
 include ./$(DEPDIR)/DetectorConfig.Plo
 include ./$(DEPDIR)/Exception.Plo
+include ./$(DEPDIR)/Exposition.Plo
 include ./$(DEPDIR)/GSMS.Plo
 include ./$(DEPDIR)/GlobalConfig.Plo
 include ./$(DEPDIR)/HullConfig.Plo
 include ./$(DEPDIR)/Job.Plo
 include ./$(DEPDIR)/MaskConfig.Plo
 include ./$(DEPDIR)/SceneConfig.Plo
+include ./$(DEPDIR)/Waypoint.Plo
 
 .cpp.o:
 	$(CXXCOMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

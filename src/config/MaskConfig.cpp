@@ -29,9 +29,10 @@
 #include <geant/G4PVPlacement.hh>
 #include <geant/G4VisAttributes.hh>
 
-#include <geant/G4PVParameterised.hh>
-#include <geant/G4VPVParameterisation.hh>
+//#include <geant/G4PVParameterised.hh>
+//#include <geant/G4VPVParameterisation.hh>
 
+/*
 void		GSMS::MaskElement::ComputeTransformation(const G4int copyNo, G4VPhysicalVolume* physVol) const
 {
 		std::cout << "Tran" << copyNo << std::endl;
@@ -46,6 +47,7 @@ G4Material*	GSMS::MaskElement::ComputeMaterial(const G4int copyNo, G4VPhysicalVo
 {
 		std::cout << "Mat" << copyNo << std::endl;
 }
+*/
 
 bool		GSMS::MaskConfig::isTransparent(unsigned char	index)
 {
@@ -65,6 +67,12 @@ unsigned int	GSMS::MaskConfig::save(std::ofstream* stream)
 unsigned int	GSMS::MaskConfig::imprintMask(G4VPhysicalVolume* wptr)
 {
 	//clean up
+	for(int i=0; i<m_mask.size(); i++) {
+		if(m_mask[i]) delete m_mask[i];
+	}
+	m_mask.clear();
+
+/*
 	if(m_assembly)
 	{
 		std::vector<G4VPhysicalVolume*>::iterator
@@ -78,8 +86,9 @@ unsigned int	GSMS::MaskConfig::imprintMask(G4VPhysicalVolume* wptr)
 			*iter = NULL;
 		}
 		delete m_assembly;
-		m_assembly = new G4AssemblyVolume;
-	}
+	};
+	m_assembly = new G4AssemblyVolume;
+*/
 
 	G4VPhysicalVolume*	world = NULL;
 	if(wptr)
@@ -93,6 +102,7 @@ unsigned int	GSMS::MaskConfig::imprintMask(G4VPhysicalVolume* wptr)
 		G4VSolid*	s_element = NULL;
 		G4VSolid*	s_mask = NULL;
 
+/*
 		s_mask = new G4Tubs(
 			"mask",
 			0.,
@@ -101,14 +111,17 @@ unsigned int	GSMS::MaskConfig::imprintMask(G4VPhysicalVolume* wptr)
 			0.*deg,
 			360.*deg
 			);
+*/
 
 		if(m_etype == "Box")
 		{
+
 			s_element = new G4Box(
 				"element",
 				m_ewidth/2,
 				m_ethick/2,
 				m_eheight/2);
+
 		}
 		else if(m_etype == "Segment")
 		{
@@ -180,7 +193,24 @@ unsigned int	GSMS::MaskConfig::imprintMask(G4VPhysicalVolume* wptr)
 				
 				mRe.rotateZ(pi/2 + angle);
 
-				m_assembly->AddPlacedVolume(element_log,mTe,&mRe);
+				G4VPhysicalVolume*	mask_phys = new G4PVPlacement(
+					G4Transform3D(mRe,G4ThreeVector(xoff,yoff,zoff)),
+					element_log,
+					"element_phys",
+					world->GetLogicalVolume(),
+					false,
+					i
+					);
+//						&mRe,
+//						G4ThreeVector(xoff,yoff,zoff),
+//						"mask_phys",
+//						element_log,
+//						world,
+//						false,
+//						0);
+				m_mask.push_back(mask_phys);
+
+				//m_assembly->AddPlacedVolume(element_log,mTe,&mRe);
 				std::cerr << "Element " << i << " at angle " << angle*360/2/pi
 					<< " xOff = " << xoff
 					<< " yOff = " << yoff
@@ -188,7 +218,7 @@ unsigned int	GSMS::MaskConfig::imprintMask(G4VPhysicalVolume* wptr)
 					<< std::endl;
 			};
 
-		m_assembly->MakeImprint(world->GetLogicalVolume(),mT,&mR, true);
+//		m_assembly->MakeImprint(world->GetLogicalVolume(),mT,&mR, true);
 
 		G4VisAttributes*	element_vis = new G4VisAttributes(GSMS_COLOR_ELEMENT);
 

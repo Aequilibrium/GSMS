@@ -538,7 +538,7 @@ UI.lo: UI.cpp UI.h ../../src/config/Config.h \
  /usr/include/boost/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp \
- ../../src/typedefs.h
+ ../../src/typedefs.h ../../src/config/Exception.h
 
 UI.h:
 
@@ -1735,3 +1735,5 @@ UI.h:
 /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp:
 
 ../../src/typedefs.h:
+
+../../src/config/Exception.h:

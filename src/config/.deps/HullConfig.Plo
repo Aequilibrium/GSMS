@@ -538,7 +538,8 @@ HullConfig.lo: HullConfig.cpp HullConfig.h Config.h \
  /usr/include/boost/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp \
- ../../src/typedefs.h /usr/include/sys/stat.h /usr/include/bits/stat.h
+ ../../src/typedefs.h ../../src/config/Exception.h \
+ /usr/include/sys/stat.h /usr/include/bits/stat.h
 
 HullConfig.h:
 
@@ -1735,6 +1736,8 @@ Config.h:
 /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp:
 
 ../../src/typedefs.h:
+
+../../src/config/Exception.h:
 
 /usr/include/sys/stat.h:
 

@@ -538,8 +538,7 @@ MaskConfig.lo: MaskConfig.cpp MaskConfig.h Config.h \
  /usr/include/boost/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp \
- ../../src/typedefs.h /usr/include/geant/G4VPVParameterisation.hh \
- /usr/include/geant/G4VVolumeMaterialScanner.hh \
+ ../../src/typedefs.h ../../src/config/Exception.h \
  /usr/include/geant/G4AssemblyVolume.hh \
  /usr/include/geant/G4Transform3D.hh /usr/include/geant/globals.hh \
  /usr/include/CLHEP/Geometry/Transform3D.h \
@@ -571,7 +570,7 @@ MaskConfig.lo: MaskConfig.cpp MaskConfig.h Config.h \
  /usr/include/geant/G4AssemblyTriplet.icc \
  /usr/include/geant/G4AssemblyVolume.icc /usr/include/sys/stat.h \
  /usr/include/bits/stat.h GSMS.h GlobalConfig.h Job.h \
- ../../src/generator/Source.h ../../src/config/Config.h \
+ ../../src/config/Config.h ../../src/generator/Source.h \
  /usr/include/geant/G4ThreeVector.hh \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4VPrimaryGenerator.hh \
@@ -618,6 +617,7 @@ MaskConfig.lo: MaskConfig.cpp MaskConfig.h Config.h \
  /usr/include/geant/G4VoxelNavigation.icc \
  /usr/include/geant/G4ParameterisedNavigation.hh \
  /usr/include/geant/G4VPVParameterisation.hh \
+ /usr/include/geant/G4VVolumeMaterialScanner.hh \
  /usr/include/geant/G4ParameterisedNavigation.icc \
  /usr/include/geant/G4ReplicaNavigation.hh \
  /usr/include/geant/G4ReplicaNavigation.icc \
@@ -644,7 +644,8 @@ MaskConfig.lo: MaskConfig.cpp MaskConfig.h Config.h \
  /usr/include/geant/G4VUserEventInformation.hh \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4GeneralParticleSourceMessenger.hh \
- /usr/include/geant/G4UImessenger.hh DetectorConfig.h \
+ /usr/include/geant/G4UImessenger.hh ../../src/config/Exposition.h \
+ ../../src/config/Waypoint.h DetectorConfig.h \
  /usr/include/geant/G4VPhysicalVolume.hh HullConfig.h SceneConfig.h \
  /usr/include/geant/G4LogicalVolume.hh /usr/include/geant/G4RunManager.hh \
  /usr/include/geant/G4RunManagerKernel.hh \
@@ -1040,9 +1041,7 @@ MaskConfig.lo: MaskConfig.cpp MaskConfig.h Config.h \
  /usr/include/geant/G4Tubs.icc /usr/include/geant/G4Box.hh \
  /usr/include/geant/G4Box.icc /usr/include/geant/G4PVPlacement.hh \
  /usr/include/geant/G4VisAttributes.hh /usr/include/geant/G4Colour.hh \
- /usr/include/geant/G4Color.hh /usr/include/geant/G4VisAttributes.icc \
- /usr/include/geant/G4PVParameterised.hh \
- /usr/include/geant/G4PVReplica.hh
+ /usr/include/geant/G4Color.hh /usr/include/geant/G4VisAttributes.icc
 
 MaskConfig.h:
 
@@ -2240,9 +2239,7 @@ Config.h:
 
 ../../src/typedefs.h:
 
-/usr/include/geant/G4VPVParameterisation.hh:
-
-/usr/include/geant/G4VVolumeMaterialScanner.hh:
+../../src/config/Exception.h:
 
 /usr/include/geant/G4AssemblyVolume.hh:
 
@@ -2320,9 +2317,9 @@ GlobalConfig.h:
 
 Job.h:
 
-../../src/generator/Source.h:
-
 ../../src/config/Config.h:
+
+../../src/generator/Source.h:
 
 /usr/include/geant/G4ThreeVector.hh:
 
@@ -2432,6 +2429,8 @@ Job.h:
 
 /usr/include/geant/G4VPVParameterisation.hh:
 
+/usr/include/geant/G4VVolumeMaterialScanner.hh:
+
 /usr/include/geant/G4ParameterisedNavigation.icc:
 
 /usr/include/geant/G4ReplicaNavigation.hh:
@@ -2487,6 +2486,10 @@ Job.h:
 /usr/include/geant/G4GeneralParticleSourceMessenger.hh:
 
 /usr/include/geant/G4UImessenger.hh:
+
+../../src/config/Exposition.h:
+
+../../src/config/Waypoint.h:
 
 DetectorConfig.h:
 
@@ -3353,7 +3356,3 @@ SceneConfig.h:
 /usr/include/geant/G4Color.hh:
 
 /usr/include/geant/G4VisAttributes.icc:
-
-/usr/include/geant/G4PVParameterised.hh:
-
-/usr/include/geant/G4PVReplica.hh:

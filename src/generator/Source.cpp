@@ -49,15 +49,17 @@ void	GSMS::Source::generate_G4(G4GeneralParticleSource*	dst, G4double	dAngle) {
 
 		//src->GetPosDist()->SetCentreCoords(get_coords());
 		//src->GetPosDist()->SetCentreCoords(G4ThreeVector(1., 0., 0.));
-		src->GetPosDist()->SetCentreCoords(G4ThreeVector(m_X, m_Y, m_Z));
+		src->GetPosDist()->SetCentreCoords(G4ThreeVector(m_x, m_y, m_z));
 
 		G4double	basePhi = 0.0;
-		m_X != 0.0 ? basePhi = std::atan(m_Y/m_X) :
-			m_Y > 0 ? basePhi = pi/2 : basePhi = -pi/2;
+		m_x != 0.0 ? basePhi = std::atan(m_y/m_x) :
+			m_y > 0 ? basePhi = pi/2 : basePhi = -pi/2;
 
-		std::cerr << "X: " << m_X << " Y: " << m_Y << " Phi: " << basePhi << std::endl;
+		if(m_x < 0.0 ) basePhi = -pi + basePhi;
+
+		std::cerr << "X: " << m_x << " Y: " << m_y << " Phi: " << basePhi << std::endl;
 		
-		G4double	dPhi = 0.0;
+		G4double	dPhi = 2*pi/2/180;
 		G4double	baseTheta = pi/2;//TODO
 		G4double	dTheta = 0.0;
 

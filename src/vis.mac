@@ -1,10 +1,12 @@
-#/geometry/navigator/verbose 2
+#/geometry/navigator/reset
+#/geometry/navigator/verbose 4
+#/geometry/navigator/check_mode true
 #/geometry/test
 
 /vis/scene/create
 
 #/vis/open ATree
-#/vis/ASCIITree/verbose 12
+#/vis/ASCIITree/verbose 2
 
 /vis/open DAWNFILE
 
@@ -18,5 +20,8 @@
 #/vis/viewer/reset
 #/vis/viewer/flush
 
+/run/beamOn 50
+
 /vis/drawVolume
 /vis/viewer/update
+/vis/viewer/flush

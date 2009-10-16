@@ -721,8 +721,7 @@ main.o: main.cpp ../config.h /usr/include/stdio.h /usr/include/features.h \
  /usr/include/boost/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp typedefs.h \
- /usr/include/geant/G4VPVParameterisation.hh \
- /usr/include/geant/G4AssemblyVolume.hh \
+ config/Exception.h /usr/include/geant/G4AssemblyVolume.hh \
  /usr/include/geant/G4Transform3D.hh \
  /usr/include/CLHEP/Geometry/Transform3D.h \
  /usr/include/CLHEP/Geometry/defs.h \
@@ -734,7 +733,7 @@ main.o: main.cpp ../config.h /usr/include/stdio.h /usr/include/features.h \
  /usr/include/geant/G4AssemblyTriplet.hh \
  /usr/include/geant/G4AssemblyTriplet.icc \
  /usr/include/geant/G4AssemblyVolume.icc config/GlobalConfig.h \
- config/Job.h generator/Source.h config/Config.h \
+ config/Job.h config/Config.h generator/Source.h \
  /usr/include/geant/G4ThreeVector.hh \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4VPrimaryGenerator.hh \
@@ -748,10 +747,10 @@ main.o: main.cpp ../config.h /usr/include/stdio.h /usr/include/features.h \
  /usr/include/geant/G4GeneralParticleSource.hh \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4GeneralParticleSourceMessenger.hh \
- config/DetectorConfig.h /usr/include/geant/G4VPhysicalVolume.hh \
- config/HullConfig.h config/SceneConfig.h \
- /usr/include/geant/G4LogicalVolume.hh physics/PhysicsList.h \
- /usr/include/geant/G4VUserPhysicsList.hh \
+ config/Exposition.h config/Waypoint.h config/DetectorConfig.h \
+ /usr/include/geant/G4VPhysicalVolume.hh config/HullConfig.h \
+ config/SceneConfig.h /usr/include/geant/G4LogicalVolume.hh \
+ physics/PhysicsList.h /usr/include/geant/G4VUserPhysicsList.hh \
  /usr/include/geant/G4ProductionCutsTable.hh \
  /usr/include/geant/G4MaterialCutsCouple.hh \
  /usr/include/geant/G4ProductionCuts.hh \
@@ -2663,7 +2662,7 @@ config/Config.h:
 
 typedefs.h:
 
-/usr/include/geant/G4VPVParameterisation.hh:
+config/Exception.h:
 
 /usr/include/geant/G4AssemblyVolume.hh:
 
@@ -2693,9 +2692,9 @@ config/GlobalConfig.h:
 
 config/Job.h:
 
-generator/Source.h:
-
 config/Config.h:
+
+generator/Source.h:
 
 /usr/include/geant/G4ThreeVector.hh:
 
@@ -2722,6 +2721,10 @@ config/Config.h:
 /usr/include/geant/G4SingleParticleSource.hh:
 
 /usr/include/geant/G4GeneralParticleSourceMessenger.hh:
+
+config/Exposition.h:
+
+config/Waypoint.h:
 
 config/DetectorConfig.h:
 
