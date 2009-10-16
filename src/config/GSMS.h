@@ -140,6 +140,13 @@ static	unsigned int	unserialize(std::string filename);
 	 */
 static	unsigned int	initRunManager();
 
+	/*!\fn unsigned int run_forced()
+	 * \brief dumb model run
+	 * \return exit code
+	 */
+static	unsigned int	run_forced(unsigned int beamOn);
+
+
 	/*!\fn unsigned int getMaterial(std::string name, G4Material** material)
 	 * \brief get material pointer
 	 * \param name material name

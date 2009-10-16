@@ -95,6 +95,12 @@ unsigned int	GSMS::GSMS::initRunManager()
 		if(src) m_job.push_source(*src);
 		src = util::SourceLib::create_source("Co57", 1, G4ThreeVector(1.*m, -1.*m, 0.));
 		if(src) m_job.push_source(*src);
+		src = util::SourceLib::create_source("Co60", 1, G4ThreeVector(-1.*m, -1.*m, 0.));
+		if(src) m_job.push_source(*src);
+		src = util::SourceLib::create_source("Ba133", 1, G4ThreeVector(-1.*m, 1.*m, 0.));
+		if(src) m_job.push_source(*src);
+
+
 
 
 //		src = util::SourceLib::create_source("Co57", 1, G4ThreeVector(1.*m, 0., 0.));
@@ -103,6 +109,7 @@ unsigned int	GSMS::GSMS::initRunManager()
 //		src = util::SourceLib::create_source("Co60", 1, G4ThreeVector(0., -1.*m, 0.));
 //		if(src) m_job.push_source(*src);		
 
+/*
 		int	discretes = 217;
 
 		for(int i = 0; i<discretes ; i++) {
@@ -112,18 +119,47 @@ unsigned int	GSMS::GSMS::initRunManager()
 		if(i)
 			if( !mp_geometry->Update() )
 			std::cerr << "FAILED" << std::endl;
-			mp_generator->Update();
+
+		mp_generator->Update();
 
 //		ui->ApplyCommand("/control/execute vis.mac");
 		mp_runmanager->GeometryHasBeenModified();
-		mp_runmanager->BeamOn(100);
+//		mp_runmanager->BeamOn(50);
 		serialize("text.gz");
+
 	}
+*/
 
 //	catch(...)
 //	{
 //		return GSMS_ERR;
 //	};
+	return GSMS_OK;
+}
+
+unsigned int	GSMS::GSMS::run_forced(unsigned int beamOn) {
+
+	try {
+		int	discretes = 217;
+		int discrete_count = m_job.get_active_exposition().get_discrete_complete_count("217*1024");
+
+		for(int i = discrete_count; i<discretes ; i++) {
+
+		std::cerr << "Current discrete count: "<< i << std::endl;
+
+		G4double	ltime = ((G4double)i / discretes)*10*2*pi;
+		setTime(&ltime);
+		if(i)
+			if( !mp_geometry->Update() )
+			std::cerr << "FAILED" << std::endl;
+			mp_generator->Update();
+
+		mp_runmanager->GeometryHasBeenModified();
+		mp_runmanager->BeamOn(beamOn);
+		serialize("text.gz");
+		}
+	} catch(...) {};
+
 	return GSMS_OK;
 }
 

@@ -27,7 +27,8 @@ int main(int argc, char* argv[])
 	//std::cout << GSMS::GSMS::serialize("text.gz") << std::endl;
 
 	GSMS::GSMS::setVerbosity(0);
-	std::cout << GSMS::GSMS::initRunManager() << std::endl;
+	GSMS::GSMS::initRunManager();
+	GSMS::GSMS::run_forced(37000);
 
 	return 0;
 }

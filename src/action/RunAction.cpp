@@ -58,9 +58,13 @@ void	GSMS::RunAction::EndOfRunAction(const G4Run* aRun)
 		spectrum[chan]++;
 	}
 
+	for(int i=0; i<1024; i++)
+		std::cout << spectrum[i] << "\t";
+	std::cout << std::endl;
+
 	//int		discrete = GSMS::get_job().get_active_exposition().get_next_active_discrete();
 	//std::cout << "DISCRETE IS: "<< discrete << std::endl;
-	SpectraIterator	itr = GSMS::get_job().get_active_exposition().get_spectrum_iterator();
+	SpectrumIterator	itr = GSMS::get_job().get_active_exposition().get_spectrum_iterator();
 	(*itr).second.push_back(spectrum);
 
 }
