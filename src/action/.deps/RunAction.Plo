@@ -552,7 +552,7 @@ RunAction.lo: RunAction.cpp RunAction.h ../../src/config/Config.h \
  /usr/include/CLHEP/Vector/ThreeVector.icc \
  /usr/include/geant/G4DigiManager.hh \
  /usr/include/geant/G4VDigitizerModule.hh /usr/include/geant/G4DCtable.hh \
- ../../src/config/GSMS.h ../../src/config/MaskConfig.h \
+ ../../src/config/GSMS.h ../../src/config/Mask.h \
  ../../src/config/Config.h /usr/include/geant/G4AssemblyVolume.hh \
  /usr/include/geant/G4Transform3D.hh \
  /usr/include/CLHEP/Geometry/Transform3D.h \
@@ -653,7 +653,7 @@ RunAction.lo: RunAction.cpp RunAction.h ../../src/config/Config.h \
  /usr/include/geant/G4GeneralParticleSourceMessenger.hh \
  /usr/include/geant/G4UImessenger.hh ../../src/config/Exposition.h \
  ../../src/config/Waypoint.h ../../src/config/DetectorConfig.h \
- /usr/include/geant/G4VPhysicalVolume.hh ../../src/config/HullConfig.h \
+ /usr/include/geant/G4VPhysicalVolume.hh ../../src/config/Hull.h \
  ../../src/config/SceneConfig.h /usr/include/geant/G4LogicalVolume.hh \
  /usr/include/geant/G4RunManager.hh \
  /usr/include/geant/G4RunManagerKernel.hh \
@@ -2292,7 +2292,7 @@ RunAction.h:
 
 ../../src/config/GSMS.h:
 
-../../src/config/MaskConfig.h:
+../../src/config/Mask.h:
 
 ../../src/config/Config.h:
 
@@ -2524,7 +2524,7 @@ RunAction.h:
 
 /usr/include/geant/G4VPhysicalVolume.hh:
 
-../../src/config/HullConfig.h:
+../../src/config/Hull.h:
 
 ../../src/config/SceneConfig.h:
 

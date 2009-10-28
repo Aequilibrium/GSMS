@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include "Job.h"
+#include "config/GSMS.h"
 #include <sys/stat.h>
 #include <sys/types.h>
 
@@ -33,6 +34,13 @@ GSMS::Exposition&	GSMS::Job::get_active_exposition() {
 
 	if(!m_expositions.size())
 		throw __EXCEPTION(_E_EMPTY_CONTAINER);
+
+	G4double	local_time;
+	GSMS::get_time(&local_time);
+
+	ExpositionIterator	it = get_exposition_iterator();
+	
+
 	return	m_expositions[0];
 }
 

@@ -32,8 +32,8 @@
 #include "action/EventAction.h"
 
 GSMS::GlobalConfig	GSMS::GSMS::m_global;
-GSMS::MaskConfig	GSMS::GSMS::m_mask;
-GSMS::HullConfig	GSMS::GSMS::m_hull;
+GSMS::Mask		GSMS::GSMS::m_mask;
+GSMS::Hull		GSMS::GSMS::m_hull;
 GSMS::Job		GSMS::GSMS::m_job;
 GSMS::DetectorConfig	GSMS::GSMS::m_detector;
 GSMS::SceneConfig	GSMS::GSMS::m_scene;
@@ -81,9 +81,10 @@ unsigned int	GSMS::GSMS::initRunManager()
 
 		mp_runmanager->Initialize();
 
+		G4VisManager*	vis = new G4VisExecutive;
+		vis->Initialize();
+
 //		G4UImanager*	ui = G4UImanager::GetUIpointer();
-//		G4VisManager*	vis = new G4VisExecutive;
-//		vis->Initialize();
 //		ui->ApplyCommand("/tracking/verbose 1");
 
 //		G4UIsession*	session = NULL;
@@ -91,13 +92,14 @@ unsigned int	GSMS::GSMS::initRunManager()
 //		session->SessionStart();
 //		delete session;
 
-		Source*	src = util::SourceLib::create_source("Cs137", 1, G4ThreeVector(1.*m, 1.*m, 0.));
-		if(src) m_job.push_source(*src);
-		src = util::SourceLib::create_source("Co57", 1, G4ThreeVector(1.*m, -1.*m, 0.));
-		if(src) m_job.push_source(*src);
-		src = util::SourceLib::create_source("Co60", 1, G4ThreeVector(-1.*m, -1.*m, 0.));
-		if(src) m_job.push_source(*src);
-		src = util::SourceLib::create_source("Ba133", 1, G4ThreeVector(-1.*m, 1.*m, 0.));
+//		Source*	src = util::SourceLib::create_source("Cs137", 1, G4ThreeVector(0.*m, 2.5*m, 0.));
+//		if(src) m_job.push_source(*src);
+
+//		src = util::SourceLib::create_source("Co57", 1, G4ThreeVector(1.*m, -1.*m, 0.));
+//		if(src) m_job.push_source(*src);
+//		src = util::SourceLib::create_source("Co60", 1, G4ThreeVector(-1.*m, -1.*m, 0.));
+//		if(src) m_job.push_source(*src);
+		Source*	src = util::SourceLib::create_source("Co60", 1, G4ThreeVector(0.*m, 2.0*m, 0.));
 		if(src) m_job.push_source(*src);
 
 
@@ -148,14 +150,18 @@ unsigned int	GSMS::GSMS::run_forced(unsigned int beamOn) {
 		std::cerr << "Current discrete count: "<< i << std::endl;
 
 		G4double	ltime = ((G4double)i / discretes)*10*2*pi;
-		setTime(&ltime);
+		set_time(&ltime);
 		if(i)
 			if( !mp_geometry->Update() )
 			std::cerr << "FAILED" << std::endl;
 			mp_generator->Update();
 
 		mp_runmanager->GeometryHasBeenModified();
+
+		G4UImanager*	ui = G4UImanager::GetUIpointer();
+//		ui->ApplyCommand("/control/execute vis.mac");
 		mp_runmanager->BeamOn(beamOn);
+
 		serialize("text.gz");
 		}
 	} catch(...) {};

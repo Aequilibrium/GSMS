@@ -80,7 +80,7 @@ virtual	~GlobalConfig() {}
 	 */
 virtual	unsigned int	save(std::ofstream* stream);
 
-	unsigned int	setTime(G4double*	time)
+	unsigned int	set_time(G4double*	time)
 	{
 		unsigned int result = GSMS_OK;
 		if(time && (*time) == (*time))
@@ -90,7 +90,7 @@ virtual	unsigned int	save(std::ofstream* stream);
 		return result;
 	}
 
-	unsigned int	getTime(G4double*	time)
+	unsigned int	get_time(G4double*	time)
 	{
 		unsigned int result = GSMS_OK;
 		if(time)

@@ -646,7 +646,7 @@ MaskConfig.lo: MaskConfig.cpp MaskConfig.h Config.h \
  /usr/include/geant/G4GeneralParticleSourceMessenger.hh \
  /usr/include/geant/G4UImessenger.hh ../../src/config/Exposition.h \
  ../../src/config/Waypoint.h DetectorConfig.h \
- /usr/include/geant/G4VPhysicalVolume.hh HullConfig.h SceneConfig.h \
+ /usr/include/geant/G4VPhysicalVolume.hh Hull.h SceneConfig.h \
  /usr/include/geant/G4LogicalVolume.hh /usr/include/geant/G4RunManager.hh \
  /usr/include/geant/G4RunManagerKernel.hh \
  /usr/include/geant/G4EventManager.hh /usr/include/geant/evmandefs.hh \
@@ -2495,7 +2495,7 @@ DetectorConfig.h:
 
 /usr/include/geant/G4VPhysicalVolume.hh:
 
-HullConfig.h:
+Hull.h:
 
 SceneConfig.h:
 

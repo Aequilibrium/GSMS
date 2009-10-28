@@ -323,7 +323,7 @@ main.o: main.cpp ../config.h /usr/include/stdio.h /usr/include/features.h \
  /usr/include/geant/G4DCofThisEvent.hh \
  /usr/include/geant/G4VDigiCollection.hh \
  /usr/include/geant/G4VUserEventInformation.hh \
- /usr/include/geant/Randomize.hh config/GSMS.h config/MaskConfig.h \
+ /usr/include/geant/Randomize.hh config/GSMS.h config/Mask.h \
  config/Config.h /usr/include/geant/globals.hh \
  /usr/include/geant/G4ios.hh /usr/include/boost/serialization/version.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
@@ -748,7 +748,7 @@ main.o: main.cpp ../config.h /usr/include/stdio.h /usr/include/features.h \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4GeneralParticleSourceMessenger.hh \
  config/Exposition.h config/Waypoint.h config/DetectorConfig.h \
- /usr/include/geant/G4VPhysicalVolume.hh config/HullConfig.h \
+ /usr/include/geant/G4VPhysicalVolume.hh config/Hull.h \
  config/SceneConfig.h /usr/include/geant/G4LogicalVolume.hh \
  physics/PhysicsList.h /usr/include/geant/G4VUserPhysicsList.hh \
  /usr/include/geant/G4ProductionCutsTable.hh \
@@ -1818,7 +1818,7 @@ typedefs.h:
 
 config/GSMS.h:
 
-config/MaskConfig.h:
+config/Mask.h:
 
 config/Config.h:
 
@@ -2730,7 +2730,7 @@ config/DetectorConfig.h:
 
 /usr/include/geant/G4VPhysicalVolume.hh:
 
-config/HullConfig.h:
+config/Hull.h:
 
 config/SceneConfig.h:
 

@@ -311,7 +311,7 @@ Geometry.lo: Geometry.cpp Geometry.h ../../src/typedefs.h \
  /usr/include/geant/G4Navigator.icc /usr/include/geant/G4SafetyHelper.hh \
  /usr/include/geant/G4TransportationManager.icc \
  /usr/include/geant/G4LogicalBorderSurface.hh ../../src/config/GSMS.h \
- ../../src/config/MaskConfig.h ../../src/config/Config.h \
+ ../../src/config/Mask.h ../../src/config/Config.h \
  /usr/include/geant/G4ios.hh /usr/include/boost/serialization/version.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/select_compiler_config.hpp \
@@ -744,7 +744,7 @@ Geometry.lo: Geometry.cpp Geometry.h ../../src/typedefs.h \
  /usr/include/geant/G4GeneralParticleSourceMessenger.hh \
  /usr/include/geant/G4UImessenger.hh ../../src/config/Exposition.h \
  ../../src/config/Waypoint.h ../../src/config/DetectorConfig.h \
- /usr/include/geant/G4VPhysicalVolume.hh ../../src/config/HullConfig.h \
+ /usr/include/geant/G4VPhysicalVolume.hh ../../src/config/Hull.h \
  ../../src/config/SceneConfig.h /usr/include/geant/G4LogicalVolume.hh \
  /usr/include/geant/G4RunManager.hh \
  /usr/include/geant/G4RunManagerKernel.hh \
@@ -1835,7 +1835,7 @@ Geometry.h:
 
 ../../src/config/GSMS.h:
 
-../../src/config/MaskConfig.h:
+../../src/config/Mask.h:
 
 ../../src/config/Config.h:
 
@@ -2763,7 +2763,7 @@ Geometry.h:
 
 /usr/include/geant/G4VPhysicalVolume.hh:
 
-../../src/config/HullConfig.h:
+../../src/config/Hull.h:
 
 ../../src/config/SceneConfig.h:
 

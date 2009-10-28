@@ -46,7 +46,7 @@ unsigned int	GSMS::DetectorConfig::save(std::ofstream* stream)
 	out << BOOST_SERIALIZATION_NVP(pDetectorConfig);
 }
 
-unsigned int	GSMS::DetectorConfig::imprintDetector(G4VPhysicalVolume* wptr)
+unsigned int	GSMS::DetectorConfig::imprint(G4VPhysicalVolume* wptr)
 {
 	G4VPhysicalVolume*	world = NULL;
 	if(wptr)

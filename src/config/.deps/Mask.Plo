@@ -1,4 +1,4 @@
-SceneConfig.lo: SceneConfig.cpp SceneConfig.h Config.h \
+Mask.lo: Mask.cpp Mask.h Config.h \
  /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/string \
  /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/c++config.h \
  /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/os_defines.h \
@@ -539,13 +539,13 @@ SceneConfig.lo: SceneConfig.cpp SceneConfig.h Config.h \
  /usr/include/boost/smart_ptr/detail/lightweight_mutex.hpp \
  /usr/include/boost/smart_ptr/detail/lwm_pthreads.hpp \
  ../../src/typedefs.h ../../src/config/Exception.h \
- /usr/include/geant/G4LogicalVolume.hh /usr/include/geant/G4Region.hh \
- /usr/include/geant/G4Region.icc /usr/include/geant/G4VPhysicalVolume.hh \
- /usr/include/geant/geomdefs.hh /usr/include/geant/globals.hh \
- /usr/include/geant/G4RotationMatrix.hh \
- /usr/include/geant/G4ThreeVector.hh \
+ /usr/include/geant/G4AssemblyVolume.hh \
+ /usr/include/geant/G4Transform3D.hh /usr/include/geant/globals.hh \
+ /usr/include/CLHEP/Geometry/Transform3D.h \
+ /usr/include/CLHEP/Geometry/defs.h \
  /usr/include/CLHEP/Vector/ThreeVector.h /usr/include/CLHEP/Vector/defs.h \
  /usr/include/CLHEP/Vector/ThreeVector.icc \
+ /usr/include/CLHEP/Geometry/Transform3D.icc \
  /usr/include/CLHEP/Vector/Rotation.h \
  /usr/include/CLHEP/Vector/RotationInterfaces.h \
  /usr/include/CLHEP/Vector/LorentzVector.h \
@@ -560,39 +560,31 @@ SceneConfig.lo: SceneConfig.cpp SceneConfig.h Config.h \
  /usr/include/CLHEP/Vector/RotationZ.h \
  /usr/include/CLHEP/Vector/RotationZ.icc \
  /usr/include/CLHEP/Vector/Rotation.icc \
- /usr/include/geant/G4VPhysicalVolume.icc \
- /usr/include/geant/G4LogicalVolume.icc \
- /usr/include/geant/G4VPhysicalVolume.hh /usr/include/sys/stat.h \
- /usr/include/bits/stat.h /usr/include/geant/G4VSolid.hh \
- /usr/include/geant/G4VSolid.icc /usr/include/geant/G4Box.hh \
- /usr/include/geant/G4CSGSolid.hh /usr/include/geant/G4VSolid.hh \
- /usr/include/geant/G4Box.icc /usr/include/geant/G4PVPlacement.hh \
- /usr/include/geant/G4Transform3D.hh \
- /usr/include/CLHEP/Geometry/Transform3D.h \
- /usr/include/CLHEP/Geometry/defs.h \
- /usr/include/CLHEP/Geometry/Transform3D.icc \
  /usr/include/CLHEP/Geometry/Point3D.h \
  /usr/include/CLHEP/Geometry/BasicVector3D.h \
  /usr/include/CLHEP/Geometry/Vector3D.h \
  /usr/include/CLHEP/Geometry/Normal3D.h \
- /usr/include/geant/G4ThreeVector.hh ../../src/config/GSMS.h \
- ../../src/config/Mask.h ../../src/config/Config.h \
- /usr/include/geant/G4AssemblyVolume.hh \
  /usr/include/geant/G4AssemblyTriplet.hh \
+ /usr/include/geant/G4ThreeVector.hh \
+ /usr/include/geant/G4RotationMatrix.hh \
  /usr/include/geant/G4AssemblyTriplet.icc \
- /usr/include/geant/G4AssemblyVolume.icc ../../src/config/GlobalConfig.h \
- ../../src/config/Job.h ../../src/config/Config.h \
- ../../src/generator/Source.h \
+ /usr/include/geant/G4AssemblyVolume.icc /usr/include/sys/stat.h \
+ /usr/include/bits/stat.h GSMS.h GlobalConfig.h Job.h \
+ ../../src/config/Config.h ../../src/generator/Source.h \
+ /usr/include/geant/G4ThreeVector.hh \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4VPrimaryGenerator.hh \
  /usr/include/geant/G4ParticleMomentum.hh \
  /usr/include/geant/G4ParticleDefinition.hh \
  /usr/include/geant/G4ParticleDefinition.icc \
  /usr/include/geant/G4SPSPosDistribution.hh \
- /usr/include/geant/G4Navigator.hh \
+ /usr/include/geant/G4Navigator.hh /usr/include/geant/geomdefs.hh \
  /usr/include/geant/G4AffineTransform.hh \
  /usr/include/geant/G4AffineTransform.icc \
- /usr/include/geant/G4LogicalVolume.hh /usr/include/geant/G4GRSVolume.hh \
+ /usr/include/geant/G4LogicalVolume.hh /usr/include/geant/G4Region.hh \
+ /usr/include/geant/G4Region.icc /usr/include/geant/G4VPhysicalVolume.hh \
+ /usr/include/geant/G4VPhysicalVolume.icc \
+ /usr/include/geant/G4LogicalVolume.icc /usr/include/geant/G4GRSVolume.hh \
  /usr/include/geant/G4VTouchable.hh /usr/include/geant/G4VTouchable.icc \
  /usr/include/geant/G4GRSVolume.icc /usr/include/geant/G4GRSSolid.hh \
  /usr/include/geant/G4GRSSolid.icc \
@@ -608,7 +600,8 @@ SceneConfig.lo: SceneConfig.cpp SceneConfig.h Config.h \
  /usr/include/geant/G4NavigationLevel.icc \
  /usr/include/geant/G4NavigationHistory.icc \
  /usr/include/geant/G4TouchableHistory.icc \
- /usr/include/geant/G4NormalNavigation.hh \
+ /usr/include/geant/G4NormalNavigation.hh /usr/include/geant/G4VSolid.hh \
+ /usr/include/geant/G4VSolid.icc \
  /usr/include/geant/G4AuxiliaryNavServices.hh \
  /usr/include/geant/G4AuxiliaryNavServices.icc \
  /usr/include/geant/G4NormalNavigation.icc \
@@ -652,9 +645,9 @@ SceneConfig.lo: SceneConfig.cpp SceneConfig.h Config.h \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4GeneralParticleSourceMessenger.hh \
  /usr/include/geant/G4UImessenger.hh ../../src/config/Exposition.h \
- ../../src/config/Waypoint.h ../../src/config/DetectorConfig.h \
- ../../src/config/Hull.h ../../src/config/SceneConfig.h \
- /usr/include/geant/G4RunManager.hh \
+ ../../src/config/Waypoint.h DetectorConfig.h \
+ /usr/include/geant/G4VPhysicalVolume.hh Hull.h SceneConfig.h \
+ /usr/include/geant/G4LogicalVolume.hh /usr/include/geant/G4RunManager.hh \
  /usr/include/geant/G4RunManagerKernel.hh \
  /usr/include/geant/G4EventManager.hh /usr/include/geant/evmandefs.hh \
  /usr/include/geant/trajectoryControl.hh \
@@ -1043,9 +1036,14 @@ SceneConfig.lo: SceneConfig.cpp SceneConfig.h Config.h \
  /usr/include/boost/iostreams/detail/config/auto_link.hpp \
  /usr/include/boost/iostreams/detail/config/dyn_link.hpp \
  /usr/include/boost/iostreams/detail/config/zlib.hpp \
- /usr/include/boost/iostreams/filter/symmetric.hpp
+ /usr/include/boost/iostreams/filter/symmetric.hpp \
+ /usr/include/geant/G4Tubs.hh /usr/include/geant/G4CSGSolid.hh \
+ /usr/include/geant/G4Tubs.icc /usr/include/geant/G4Box.hh \
+ /usr/include/geant/G4Box.icc /usr/include/geant/G4PVPlacement.hh \
+ /usr/include/geant/G4VisAttributes.hh /usr/include/geant/G4Colour.hh \
+ /usr/include/geant/G4Color.hh /usr/include/geant/G4VisAttributes.icc
 
-SceneConfig.h:
+Mask.h:
 
 Config.h:
 
@@ -2243,27 +2241,23 @@ Config.h:
 
 ../../src/config/Exception.h:
 
-/usr/include/geant/G4LogicalVolume.hh:
+/usr/include/geant/G4AssemblyVolume.hh:
 
-/usr/include/geant/G4Region.hh:
-
-/usr/include/geant/G4Region.icc:
-
-/usr/include/geant/G4VPhysicalVolume.hh:
-
-/usr/include/geant/geomdefs.hh:
+/usr/include/geant/G4Transform3D.hh:
 
 /usr/include/geant/globals.hh:
 
-/usr/include/geant/G4RotationMatrix.hh:
+/usr/include/CLHEP/Geometry/Transform3D.h:
 
-/usr/include/geant/G4ThreeVector.hh:
+/usr/include/CLHEP/Geometry/defs.h:
 
 /usr/include/CLHEP/Vector/ThreeVector.h:
 
 /usr/include/CLHEP/Vector/defs.h:
 
 /usr/include/CLHEP/Vector/ThreeVector.icc:
+
+/usr/include/CLHEP/Geometry/Transform3D.icc:
 
 /usr/include/CLHEP/Vector/Rotation.h:
 
@@ -2295,38 +2289,6 @@ Config.h:
 
 /usr/include/CLHEP/Vector/Rotation.icc:
 
-/usr/include/geant/G4VPhysicalVolume.icc:
-
-/usr/include/geant/G4LogicalVolume.icc:
-
-/usr/include/geant/G4VPhysicalVolume.hh:
-
-/usr/include/sys/stat.h:
-
-/usr/include/bits/stat.h:
-
-/usr/include/geant/G4VSolid.hh:
-
-/usr/include/geant/G4VSolid.icc:
-
-/usr/include/geant/G4Box.hh:
-
-/usr/include/geant/G4CSGSolid.hh:
-
-/usr/include/geant/G4VSolid.hh:
-
-/usr/include/geant/G4Box.icc:
-
-/usr/include/geant/G4PVPlacement.hh:
-
-/usr/include/geant/G4Transform3D.hh:
-
-/usr/include/CLHEP/Geometry/Transform3D.h:
-
-/usr/include/CLHEP/Geometry/defs.h:
-
-/usr/include/CLHEP/Geometry/Transform3D.icc:
-
 /usr/include/CLHEP/Geometry/Point3D.h:
 
 /usr/include/CLHEP/Geometry/BasicVector3D.h:
@@ -2335,29 +2297,31 @@ Config.h:
 
 /usr/include/CLHEP/Geometry/Normal3D.h:
 
+/usr/include/geant/G4AssemblyTriplet.hh:
+
 /usr/include/geant/G4ThreeVector.hh:
 
-../../src/config/GSMS.h:
-
-../../src/config/Mask.h:
-
-../../src/config/Config.h:
-
-/usr/include/geant/G4AssemblyVolume.hh:
-
-/usr/include/geant/G4AssemblyTriplet.hh:
+/usr/include/geant/G4RotationMatrix.hh:
 
 /usr/include/geant/G4AssemblyTriplet.icc:
 
 /usr/include/geant/G4AssemblyVolume.icc:
 
-../../src/config/GlobalConfig.h:
+/usr/include/sys/stat.h:
 
-../../src/config/Job.h:
+/usr/include/bits/stat.h:
+
+GSMS.h:
+
+GlobalConfig.h:
+
+Job.h:
 
 ../../src/config/Config.h:
 
 ../../src/generator/Source.h:
+
+/usr/include/geant/G4ThreeVector.hh:
 
 /usr/include/geant/G4SingleParticleSource.hh:
 
@@ -2373,11 +2337,23 @@ Config.h:
 
 /usr/include/geant/G4Navigator.hh:
 
+/usr/include/geant/geomdefs.hh:
+
 /usr/include/geant/G4AffineTransform.hh:
 
 /usr/include/geant/G4AffineTransform.icc:
 
 /usr/include/geant/G4LogicalVolume.hh:
+
+/usr/include/geant/G4Region.hh:
+
+/usr/include/geant/G4Region.icc:
+
+/usr/include/geant/G4VPhysicalVolume.hh:
+
+/usr/include/geant/G4VPhysicalVolume.icc:
+
+/usr/include/geant/G4LogicalVolume.icc:
 
 /usr/include/geant/G4GRSVolume.hh:
 
@@ -2418,6 +2394,10 @@ Config.h:
 /usr/include/geant/G4TouchableHistory.icc:
 
 /usr/include/geant/G4NormalNavigation.hh:
+
+/usr/include/geant/G4VSolid.hh:
+
+/usr/include/geant/G4VSolid.icc:
 
 /usr/include/geant/G4AuxiliaryNavServices.hh:
 
@@ -2511,11 +2491,15 @@ Config.h:
 
 ../../src/config/Waypoint.h:
 
-../../src/config/DetectorConfig.h:
+DetectorConfig.h:
 
-../../src/config/Hull.h:
+/usr/include/geant/G4VPhysicalVolume.hh:
 
-../../src/config/SceneConfig.h:
+Hull.h:
+
+SceneConfig.h:
+
+/usr/include/geant/G4LogicalVolume.hh:
 
 /usr/include/geant/G4RunManager.hh:
 
@@ -3352,3 +3336,23 @@ Config.h:
 /usr/include/boost/iostreams/detail/config/zlib.hpp:
 
 /usr/include/boost/iostreams/filter/symmetric.hpp:
+
+/usr/include/geant/G4Tubs.hh:
+
+/usr/include/geant/G4CSGSolid.hh:
+
+/usr/include/geant/G4Tubs.icc:
+
+/usr/include/geant/G4Box.hh:
+
+/usr/include/geant/G4Box.icc:
+
+/usr/include/geant/G4PVPlacement.hh:
+
+/usr/include/geant/G4VisAttributes.hh:
+
+/usr/include/geant/G4Colour.hh:
+
+/usr/include/geant/G4Color.hh:
+
+/usr/include/geant/G4VisAttributes.icc:

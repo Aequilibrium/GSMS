@@ -27,6 +27,8 @@ typedef	unsigned long long	unsigned_int64;
 #define	GSMS_COLOR_MGO		G4Colour(.5,.5,.5)
 #define	GSMS_COLOR_CRYSTAL	G4Colour(0.,1.,0.)
 #define	GSMS_COLOR_ELEMENT	G4Colour(1.,0.,0.)
+#define	GSMS_COLOR_PLASTIC	G4Colour(0.25,0.25,0.25)
+#define	GSMS_COLOR_STEEL	G4Colour(0.,0.,0.)
 
 bool	__SUCCEEDED(unsigned int GSMS_CODE);
 

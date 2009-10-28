@@ -64,9 +64,10 @@ G4VPhysicalVolume* GSMS::Geometry::Construct()
 	std::cerr << "Construct" << std::endl;
 	G4double	new_time = 0;
 	if(
+		__SUCCEEDED(GSMS::set_time(&new_time)) &&
 		__SUCCEEDED(GSMS::imprintDetector(m_world)) &&
-		__SUCCEEDED(GSMS::setTime(&new_time)) &&
-		__SUCCEEDED(GSMS::imprintMask(m_world))
+		__SUCCEEDED(GSMS::imprintMask(m_world)) &&
+		__SUCCEEDED(GSMS::get_hull().imprint(m_world))
 	)
 	return m_world;
 	else
@@ -254,6 +255,18 @@ unsigned int GSMS::Geometry::defineMaterials()
 		mptr->AddElement(C, 	0.60);
 		mptr->AddElement(O, 	0.32);
 		m_materials.insert(std::pair<std::string,G4Material*>(name,mptr));
+//GRP
+		name = "GRP";
+		mptr = new G4Material(
+			name,
+			1.7*g/cm3,
+			4);
+		mptr->AddElement(H, 	6);
+		mptr->AddElement(C, 	45);
+		mptr->AddElement(O, 	49);
+		mptr->AddElement(Si, 	5);
+		m_materials.insert(std::pair<std::string,G4Material*>(name,mptr));
+
 //lavsan
 		name = "Lavsan";
 		mptr = new G4Material(

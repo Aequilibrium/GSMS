@@ -559,7 +559,7 @@ DetectorConfig.lo: DetectorConfig.cpp DetectorConfig.h Config.h \
  /usr/include/CLHEP/Vector/RotationZ.icc \
  /usr/include/CLHEP/Vector/Rotation.icc \
  /usr/include/geant/G4VPhysicalVolume.icc /usr/include/sys/stat.h \
- /usr/include/bits/stat.h GSMS.h MaskConfig.h \
+ /usr/include/bits/stat.h GSMS.h Mask.h \
  /usr/include/geant/G4AssemblyVolume.hh \
  /usr/include/geant/G4Transform3D.hh \
  /usr/include/CLHEP/Geometry/Transform3D.h \
@@ -646,7 +646,7 @@ DetectorConfig.lo: DetectorConfig.cpp DetectorConfig.h Config.h \
  /usr/include/geant/G4SingleParticleSource.hh \
  /usr/include/geant/G4GeneralParticleSourceMessenger.hh \
  /usr/include/geant/G4UImessenger.hh ../../src/config/Exposition.h \
- ../../src/config/Waypoint.h HullConfig.h SceneConfig.h \
+ ../../src/config/Waypoint.h Hull.h SceneConfig.h \
  /usr/include/geant/G4LogicalVolume.hh /usr/include/geant/G4RunManager.hh \
  /usr/include/geant/G4RunManagerKernel.hh \
  /usr/include/geant/G4EventManager.hh /usr/include/geant/evmandefs.hh \
@@ -2313,7 +2313,7 @@ Config.h:
 
 GSMS.h:
 
-MaskConfig.h:
+Mask.h:
 
 /usr/include/geant/G4AssemblyVolume.hh:
 
@@ -2513,7 +2513,7 @@ Job.h:
 
 ../../src/config/Waypoint.h:
 
-HullConfig.h:
+Hull.h:
 
 SceneConfig.h:
 

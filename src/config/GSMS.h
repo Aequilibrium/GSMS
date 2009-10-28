@@ -23,11 +23,11 @@
 #ifndef GSMS_H_
 #define GSMS_H_
 
-#include "MaskConfig.h"
+#include "Mask.h"
 #include "GlobalConfig.h"
 #include "Job.h"
 #include "DetectorConfig.h"
-#include "HullConfig.h"
+#include "Hull.h"
 #include "SceneConfig.h"
 
 #include <geant/G4RunManager.hh>
@@ -63,12 +63,12 @@ static	Job	m_job;
 /*!\var m_mask
  * \brief mask configuration
  */
-static	MaskConfig	m_mask;
+static	Mask	m_mask;
 
 /*!\var m_hull
  * \brief hull configuration
  */
-static	HullConfig	m_hull;
+static	Hull	m_hull;
 
 /*!\var m_detector
  * \brief detector configuration
@@ -162,16 +162,28 @@ static	unsigned int	getMaterial(std::string name,G4Material** material);
 	 */
 static	unsigned int	getWorld(G4VPhysicalVolume** wptr) {return m_scene.getWorld(wptr);}
 
-static	unsigned int	imprintDetector(G4VPhysicalVolume* world) {return m_detector.imprintDetector(world);}
-static	unsigned int	imprintMask(G4VPhysicalVolume* world = NULL) {return m_mask.imprintMask(world);}
-static	unsigned int	getTime(G4double* time) {return m_global.getTime(time);}
-static	unsigned int	setTime(G4double* time) {return m_global.setTime(time);}
+static	unsigned int	imprintDetector(G4VPhysicalVolume* world) {return m_detector.imprint(world);}
+static	unsigned int	imprintMask(G4VPhysicalVolume* world = NULL) {return m_mask.imprint(world);}
+static	unsigned int	get_time(G4double* time) {return m_global.get_time(time);}
+static	unsigned int	set_time(G4double* time) {return m_global.set_time(time);}
 
 	/*!\fn Job&	get_job() {return m_job;}
-	 * \brief get job instance pointer
+	 * \brief get job instance
 	 * \return job object
 	 */
 static	Job&	get_job() {return m_job;}
+
+	/*!\fn Hull&	get_hull() {return m_hull;}
+	 * \brief get hull instance
+	 * \return hull object
+	 */
+static	Hull&	get_hull() {return m_hull;}
+
+	/*!\fn Mask&	get_mask() {return m_mask;}
+	 * \brief get mask
+	 * \return mask object
+	 */
+static	Mask&	get_mask() {return m_mask;}
 
 };
 

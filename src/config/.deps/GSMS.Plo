@@ -1,4 +1,4 @@
-GSMS.lo: GSMS.cpp GSMS.h MaskConfig.h Config.h \
+GSMS.lo: GSMS.cpp GSMS.h Mask.h Config.h \
  /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/string \
  /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/c++config.h \
  /usr/lib/gcc/i686-pc-linux-gnu/4.4.1/include/g++-v4/i686-pc-linux-gnu/bits/os_defines.h \
@@ -645,7 +645,7 @@ GSMS.lo: GSMS.cpp GSMS.h MaskConfig.h Config.h \
  /usr/include/geant/G4GeneralParticleSourceMessenger.hh \
  /usr/include/geant/G4UImessenger.hh ../../src/config/Exposition.h \
  ../../src/config/Waypoint.h DetectorConfig.h \
- /usr/include/geant/G4VPhysicalVolume.hh HullConfig.h SceneConfig.h \
+ /usr/include/geant/G4VPhysicalVolume.hh Hull.h SceneConfig.h \
  /usr/include/geant/G4LogicalVolume.hh /usr/include/geant/G4RunManager.hh \
  /usr/include/geant/G4RunManagerKernel.hh \
  /usr/include/geant/G4EventManager.hh /usr/include/geant/evmandefs.hh \
@@ -1097,7 +1097,7 @@ GSMS.lo: GSMS.cpp GSMS.h MaskConfig.h Config.h \
 
 GSMS.h:
 
-MaskConfig.h:
+Mask.h:
 
 Config.h:
 
@@ -2543,7 +2543,7 @@ DetectorConfig.h:
 
 /usr/include/geant/G4VPhysicalVolume.hh:
 
-HullConfig.h:
+Hull.h:
 
 SceneConfig.h:
 

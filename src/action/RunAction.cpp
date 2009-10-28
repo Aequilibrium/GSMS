@@ -50,6 +50,8 @@ void	GSMS::RunAction::EndOfRunAction(const G4Run* aRun)
 	for(int i=0; i<1024; i++)
 		spectrum.push_back(0.);
 
+	std::cerr << "Total digits: " << theRun->get_size() << std::endl;
+
 	for(int i=0; i< theRun->get_size(); i++)
 	{
 		G4double time = theRun->get_time(i);

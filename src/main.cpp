@@ -23,12 +23,11 @@ int main(int argc, char* argv[])
 {
 	puts(PACKAGE_STRING);
 
-	std::cout << GSMS::GSMS::unserialize("text.gz") << std::endl;
-	//std::cout << GSMS::GSMS::serialize("text.gz") << std::endl;
+	GSMS::GSMS::unserialize("text.gz");
 
 	GSMS::GSMS::setVerbosity(0);
 	GSMS::GSMS::initRunManager();
-	GSMS::GSMS::run_forced(37000);
+	GSMS::GSMS::run_forced(3284);
 
 	return 0;
 }

@@ -28,6 +28,10 @@
 #include "config/Exposition.h"
 
 namespace GSMS {
+
+typedef	std::vector<Exposition>::iterator	ExpositionIterator;
+typedef	std::vector<Source>::iterator	SourceIterator;
+
 /*!\class Job
  * \brief Job configuration
  */
@@ -98,12 +102,12 @@ public:
 	 */
 virtual unsigned int	save(std::ofstream* stream);
 
-	/*!\fn std::vector<Source>::iterator	get_source_iterator()
+	/*!\fn SourceIterator	get_source_iterator()
 	 * \brief Sources iterator
 	 * \return iterator of sources vector
 	 */
-inline	std::vector<Source>::iterator	get_source_iterator() {
-		std::vector<Source>::iterator	it = m_sources.begin();
+inline	SourceIterator	get_source_iterator() {
+		SourceIterator	it = m_sources.begin();
 		return it;
 	}
 
@@ -123,12 +127,12 @@ inline	void	push_source(Source&	source) {
 		m_sources.push_back(source);
 	}
 
-	/*!\fn std::vector<Exposition>::iterator	get_exposition_iterator()
+	/*!\fn ExpositionIterator	get_exposition_iterator()
 	 * \brief Expositions iterator
 	 * \return iterator over expositions vector
 	 */
-inline	std::vector<Exposition>::iterator	get_exposition_iterator() {
-		std::vector<Exposition>::iterator	it = m_expositions.begin();
+inline	ExpositionIterator	get_exposition_iterator() {
+		ExpositionIterator	it = m_expositions.begin();
 		return it;
 	}
 
