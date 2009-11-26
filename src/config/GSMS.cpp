@@ -92,15 +92,15 @@ unsigned int	GSMS::GSMS::initRunManager()
 //		session->SessionStart();
 //		delete session;
 
-//		Source*	src = util::SourceLib::create_source("Cs137", 1, G4ThreeVector(0.*m, 2.5*m, 0.));
-//		if(src) m_job.push_source(*src);
+		Source*	src = util::SourceLib::create_source("Co60", 1, G4ThreeVector(0.*m, 2.0*m, 0.));
+		if(src) m_job.push_source(*src);
 
 //		src = util::SourceLib::create_source("Co57", 1, G4ThreeVector(1.*m, -1.*m, 0.));
 //		if(src) m_job.push_source(*src);
 //		src = util::SourceLib::create_source("Co60", 1, G4ThreeVector(-1.*m, -1.*m, 0.));
 //		if(src) m_job.push_source(*src);
-		Source*	src = util::SourceLib::create_source("Co60", 1, G4ThreeVector(0.*m, 2.0*m, 0.));
-		if(src) m_job.push_source(*src);
+//		Source*	src = util::SourceLib::create_source("Co60", 1, G4ThreeVector(0.*m, 2.0*m, 0.));
+//		if(src) m_job.push_source(*src);
 
 
 
@@ -140,7 +140,7 @@ unsigned int	GSMS::GSMS::initRunManager()
 }
 
 unsigned int	GSMS::GSMS::run_forced(unsigned int beamOn) {
-
+	
 	try {
 		int	discretes = 217;
 		int discrete_count = m_job.get_active_exposition().get_discrete_complete_count("217*1024");
@@ -158,13 +158,17 @@ unsigned int	GSMS::GSMS::run_forced(unsigned int beamOn) {
 
 		mp_runmanager->GeometryHasBeenModified();
 
-		G4UImanager*	ui = G4UImanager::GetUIpointer();
+//		G4UImanager*	ui = G4UImanager::GetUIpointer();
 //		ui->ApplyCommand("/control/execute vis.mac");
 		mp_runmanager->BeamOn(beamOn);
 
 		serialize("text.gz");
+
 		}
-	} catch(...) {};
+	} catch(...) {
+		std::cerr << "Error!!!" << std::endl;
+		return GSMS_ERR;
+	}
 
 	return GSMS_OK;
 }
@@ -179,8 +183,8 @@ unsigned int	GSMS::GSMS::serialize(std::string filename)
 			<< BOOST_SERIALIZATION_NVP(m_global)
 			<< BOOST_SERIALIZATION_NVP(m_hull)
 			<< BOOST_SERIALIZATION_NVP(m_detector)
-			<< BOOST_SERIALIZATION_NVP(m_job);
-//			<< BOOST_SERIALIZATION_NVP(m_scene);
+			<< BOOST_SERIALIZATION_NVP(m_job)
+			<< BOOST_SERIALIZATION_NVP(m_scene);
 		std::ofstream file_out(filename.c_str(),std::ios::out | std::ios::binary);
 
 		boost::iostreams::filtering_ostreambuf out;

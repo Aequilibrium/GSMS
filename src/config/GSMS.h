@@ -50,6 +50,24 @@ namespace GSMS
 class GSMS
 {
 
+friend class boost::serialization::access;
+
+/*!\fn serialize(Archive & ar, const unsigned int version)
+ * \brief GSMS serializer
+ * \param ar output archive
+ * \param version archive version
+ */
+template<class Archive>
+void serialize(Archive & ar, const unsigned int version)
+{
+	ar	& BOOST_SERIALIZATION_NVP(m_mask)
+		& BOOST_SERIALIZATION_NVP(m_global)
+		& BOOST_SERIALIZATION_NVP(m_hull)
+		& BOOST_SERIALIZATION_NVP(m_detector)
+		& BOOST_SERIALIZATION_NVP(m_job)
+		& BOOST_SERIALIZATION_NVP(m_scene);
+}
+
 /*!\var m_global
  * \brief global configuration
  */

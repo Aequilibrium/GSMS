@@ -11,6 +11,7 @@
 
 #include "config/GSMS.h"
 
+
 bool	__SUCCEEDED(unsigned int ARG)
 {
 	bool result = false;
@@ -27,7 +28,9 @@ int main(int argc, char* argv[])
 
 	GSMS::GSMS::setVerbosity(0);
 	GSMS::GSMS::initRunManager();
-	GSMS::GSMS::run_forced(3284);
+	GSMS::GSMS::run_forced(50000);//Co60
+	//GSMS::GSMS::run_forced(3378);//Cs137
+	//GSMS::GSMS::run_forced(7200);//Ba133
 
 	return 0;
 }

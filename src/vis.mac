@@ -20,7 +20,7 @@
 #/vis/viewer/reset
 #/vis/viewer/flush
 
-/run/beamOn 100
+/run/beamOn 1
 
 /vis/drawVolume
 /vis/viewer/update

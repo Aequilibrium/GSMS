@@ -90,8 +90,8 @@ public:
 			m_material = material;
 			m_radius =		25.0*mm;
 			m_height =		100.0*mm;
-			m_mirror_thick =	1.5*mm;
-			m_shirt_thick =		0.5*mm;
+			m_mirror_thick =	1.0*mm;
+			m_shirt_thick =		3.0*mm;
 		}
 
 	/*!\fn ~DetectorConfig()

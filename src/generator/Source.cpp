@@ -61,12 +61,14 @@ void	GSMS::Source::generate_G4(G4GeneralParticleSource*	dst, G4double	dAngle) {
 		std::cerr << "X: " << m_x << " Y: " << m_y << " Phi: " << basePhi << std::endl;
 		
 		
-		//2*pi/2/180;//
 		G4double	dPhi = GSMS::get_hull().get_delta_phi(get_coords());
 		G4double	baseTheta = pi/2;//TODO
-		//6*pi/2/180;//
+
 		G4double	dTheta = GSMS::get_hull().get_delta_theta(get_coords());
 		std::cerr << "dPhi: " << dPhi*360/2/pi << "; dTheta" << dTheta*360/2/pi << std::endl;
+
+		//dPhi = 3*pi/2/180;//2*pi/2/180;
+		//dTheta = 16*pi/2/180;//6*pi/2/180;
 
 		src->GetAngDist()->SetMinPhi(basePhi - dPhi);
 		src->GetAngDist()->SetMaxPhi(basePhi + dPhi);

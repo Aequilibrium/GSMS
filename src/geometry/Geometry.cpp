@@ -229,6 +229,22 @@ unsigned int GSMS::Geometry::defineMaterials()
 		mptr->AddElement(Cu,	0.0050);
 		mptr->AddElement(Fe,	0.9635);
 		m_materials.insert(std::pair<std::string,G4Material*>(name,mptr));
+
+//stainless steel
+		name = "H18N10";
+		mptr = new G4Material(
+			name, 
+			7.81*g/cm3,
+			7);
+		mptr->AddElement(C,	0.001);
+		mptr->AddElement(Si,	0.010);
+		mptr->AddElement(Mn,	0.014);
+		mptr->AddElement(Cr,	0.170);
+		mptr->AddElement(Ni,	0.100);
+		mptr->AddElement(Cu,	0.005);
+		mptr->AddElement(Fe,	0.700);
+		m_materials.insert(std::pair<std::string,G4Material*>(name,mptr));
+
 //D16
 		name = "D16";
 		mptr = new G4Material(

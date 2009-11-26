@@ -25,8 +25,8 @@ GSMS::Source*	util::SourceLib::create_source(std::string	name, float activity, G
 	GSMS::Source*	src = new GSMS::Source();
 
 	if(name == "Cs137")	{
-//		src->push_gamma(0.032, 0.058);
-//		src->push_gamma(0.036, 0.014);
+		src->push_gamma(0.032, 0.058);
+		src->push_gamma(0.036, 0.014);
 		src->push_gamma(0.662, 0.9);
 	}
 	if(name == "Co57")	{
@@ -38,9 +38,9 @@ GSMS::Source*	util::SourceLib::create_source(std::string	name, float activity, G
 		src->push_gamma(1.332, 1.0);
 	}
 	if(name == "Ba133")	{
-//		src->push_gamma(0.030, 34.25);
-//		src->push_gamma(0.031, 63.42);
-//		src->push_gamma(0.035, 22.76);
+		src->push_gamma(0.030, 34.25);
+		src->push_gamma(0.031, 63.42);
+		src->push_gamma(0.035, 22.76);
 		src->push_gamma(0.081, 32.97);
 		src->push_gamma(0.276, 6.9);
 		src->push_gamma(0.303, 17.79);

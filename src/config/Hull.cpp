@@ -49,6 +49,8 @@ unsigned int	GSMS::Hull::imprint(G4VPhysicalVolume* wptr)
 	try
 	{
 		G4VSolid*	s_hull = NULL;
+		G4double	drum_radius = 0.;
+		G4double	drum_height = 0.;
 
 		if(m_radius < 0) {
 			double mr, mw, mt;
@@ -60,10 +62,14 @@ unsigned int	GSMS::Hull::imprint(G4VPhysicalVolume* wptr)
 			std::cerr << "Mask thickness: " << mt << std::endl;
 			std::cerr << "Mask width: " << mw << std::endl;
 
-			if(GSMS::GSMS::get_mask().get_etype() == "Box")
+			drum_radius = mr;
+
+			if(GSMS::GSMS::get_mask().get_etype() == "Box") {
 				m_radius = std::sqrt((mr+mt)*(mr+mt) + mw*mw/4.) + m_gap;
-			else
+			}
+			else {
 				m_radius = mr + mt + m_gap;
+			}
 
 			std::cerr << "Hull radius: " << m_radius << std::endl;
 
@@ -71,17 +77,27 @@ unsigned int	GSMS::Hull::imprint(G4VPhysicalVolume* wptr)
 
 		if(m_height < 0)
 			m_height = GSMS::GSMS::get_mask().get_eheight() + 2*m_gap;
+		drum_height = GSMS::GSMS::get_mask().get_eheight();
 		
 
 		G4Material*	mat_cover = NULL;
 		G4Material*	mat_stand = NULL;
+		G4Material*	mat_stainless = NULL;
 		G4VSolid*	s_cover = NULL;
 		G4VSolid*	s_hat = NULL;
 		G4VSolid*	s_plate = NULL;
 		G4VSolid*	s_stand = NULL;
+		G4VSolid*	s_mtube = NULL;
+		G4VSolid*	s_mplate = NULL;
+
+		G4VSolid*	s_drum_plate_top = NULL;
+		G4VSolid*	s_drum_plate_bottom = NULL;
+		G4VSolid*	s_drum = NULL;
 
 
-		if(!__SUCCEEDED(GSMS::GSMS::getMaterial("GRP", &mat_cover)) ||
+		if(	!__SUCCEEDED(GSMS::GSMS::getMaterial("GRP", &mat_cover)) ||
+			!__SUCCEEDED(GSMS::GSMS::getMaterial("Steel", &mat_stand)) ||
+			!__SUCCEEDED(GSMS::GSMS::getMaterial("H18N10", &mat_stainless)) ||
 			m_radius <= 0. || m_thickness <= 0.)
 			return GSMS_ERR;
 
@@ -101,11 +117,52 @@ unsigned int	GSMS::Hull::imprint(G4VPhysicalVolume* wptr)
 			0.0*deg,
 			360.0*deg);
 
+
 		s_plate = new G4Tubs(
 			"Top_Plate",
-			m_radius - m_thickness,
+			6.0*cm/2,//TODO - get real detector radius
 			m_radius,
 			5.0*mm/2,
+			0.0*deg,
+			360.0*deg);
+
+		s_mtube = new G4Tubs(
+			"Metal_Tube",
+			6.0*cm/2,//TODO - get real detector radius
+			6.5*cm/2,
+			9.0*cm/2,
+			0.0*deg,
+			360.0*deg);
+
+		s_mplate = new G4Tubs(
+			"Metal_Plate",
+			6.5*cm/2,//TODO - get real detector radius
+			9.0*cm/2,
+			3.0*mm/2,
+			0.0*deg,
+			360.0*deg);
+
+		s_drum_plate_top = new G4Tubs(
+			"Drum_Plate_Top",
+			28.*cm/2,
+			drum_radius,
+			0.4*mm/2,
+			0.0*deg,
+			360.0*deg);
+
+		s_drum_plate_bottom = new G4Tubs(
+			"Drum_Plate_Bottom",
+			0.,
+			drum_radius,
+			0.8*mm/2,
+			0.0*deg,
+			360.0*deg);
+
+		s_drum = new G4Tubs(
+			"Drum",
+			drum_radius,
+			drum_radius + 0.8*mm,
+			drum_height/2,
 			0.0*deg,
 			360.0*deg);
 
@@ -164,6 +221,84 @@ unsigned int	GSMS::Hull::imprint(G4VPhysicalVolume* wptr)
 			true,
 			0);
 
+		//metal tube
+		G4LogicalVolume*	mtube_log = new G4LogicalVolume(
+						s_mtube,
+						mat_stand,
+						"mtube_log");
+
+		G4LogicalVolume*	mplate_log = new G4LogicalVolume(
+						s_mplate,
+						mat_stand,
+						"mplate_log");
+
+
+		G4VPhysicalVolume*	mtube_phys = new G4PVPlacement(
+			0,
+			G4ThreeVector(0.,0.,(m_height - 9.0*cm)/2),//TODO? mtube height?
+			"mtube_phys",
+			mtube_log,
+			world,//cover_phys?
+			true,
+			0);
+
+		G4VPhysicalVolume*	mplate_phys_bottom = new G4PVPlacement(
+			0,
+			G4ThreeVector(0.,0.,(m_height + 3.0*mm)/2 - 9.0*cm),//TODO? mtube height?
+			"mplate_phys_bottom",
+			mplate_log,
+			world,//cover_phys?
+			true,
+			0);
+
+		G4VPhysicalVolume*	mplate_phys_top = new G4PVPlacement(
+			0,
+			G4ThreeVector(0.,0.,(m_height - 3.0*mm)/2),//TODO? mtube height?
+			"mplate_phys_top",
+			mplate_log,
+			world,//cover_phys?
+			true,
+			0);
+
+		//drum
+		G4LogicalVolume*	drum_plate_top_log = new G4LogicalVolume(
+						s_drum_plate_top,
+						mat_stainless,
+						"drum_plate_top");
+		G4LogicalVolume*	drum_plate_bottom_log = new G4LogicalVolume(
+						s_drum_plate_bottom,
+						mat_stainless,
+						"drum_plate_bottom");
+		G4LogicalVolume*	drum_log = new G4LogicalVolume(
+						s_drum,
+						mat_stainless,
+						"drum_log");
+
+		G4VPhysicalVolume*	drum_plate_top_phys = new G4PVPlacement(
+			0,
+			G4ThreeVector(0.,0.,(drum_height + 0.8*mm)/2),
+			"drum_plate_top_phys",
+			drum_plate_top_log,
+			world,//cover_phys?
+			true,
+			0);
+		G4VPhysicalVolume*	drum_plate_bottom_phys = new G4PVPlacement(
+			0,
+			G4ThreeVector(0.,0.,-(drum_height + 0.8*mm)/2),
+			"drum_plate_bottom_phys",
+			drum_plate_bottom_log,
+			world,//cover_phys?
+			true,
+			0);
+		G4VPhysicalVolume*	drum_phys = new G4PVPlacement(
+			0,
+			G4ThreeVector(0.,0.,0.),
+			"drum_phys",
+			drum_log,
+			world,//cover_phys?
+			true,
+			0);
+
 		G4VisAttributes*	cover_vis = new G4VisAttributes(GSMS_COLOR_PLASTIC);
 		G4VisAttributes*	stand_vis = new G4VisAttributes(GSMS_COLOR_STEEL);
 
@@ -176,7 +311,11 @@ unsigned int	GSMS::Hull::imprint(G4VPhysicalVolume* wptr)
 		cover_log->SetVisAttributes(cover_vis);
 		hat_log->SetVisAttributes(cover_vis);
 		plate_log->SetVisAttributes(cover_vis);
-//		stand_log->SetVisAttributes(stand_vis);
+		mplate_log->SetVisAttributes(stand_vis);
+		mtube_log->SetVisAttributes(stand_vis);
+		drum_plate_top_log->SetVisAttributes(stand_vis);
+		drum_plate_bottom_log->SetVisAttributes(stand_vis);
+		drum_log->SetVisAttributes(stand_vis);
 
 
 /*

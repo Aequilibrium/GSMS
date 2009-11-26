@@ -41,7 +41,11 @@ DatabaseTransaction::~DatabaseTransaction() {
 	}
 }
 
-DatabaseTransaction &DatabaseTransaction::operator=(DatabaseTransaction &rhs) {
+DatabaseTransaction a;
+DatabaseTransaction b;
+a = b
+
+DatabaseTransaction& DatabaseTransaction::operator=(DatabaseTransaction &rhs) {
 	if(m_transaction != rhs.m_transaction);
 		m_transaction = rhs.m_transaction;
 		return *this;

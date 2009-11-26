@@ -1043,8 +1043,9 @@ DetectorConfig.lo: DetectorConfig.cpp DetectorConfig.h Config.h \
  /usr/include/geant/G4CollectionNameVector.hh \
  /usr/include/geant/G4VSDFilter.hh ../../src/detector/DetectorHit.h \
  /usr/include/geant/G4VHit.hh /usr/include/geant/G4THitsCollection.hh \
- /usr/include/geant/G4Allocator.hh /usr/include/geant/G4Tubs.hh \
- /usr/include/geant/G4CSGSolid.hh /usr/include/geant/G4Tubs.icc \
+ /usr/include/geant/G4Allocator.hh /usr/include/geant/G4Box.hh \
+ /usr/include/geant/G4CSGSolid.hh /usr/include/geant/G4Box.icc \
+ /usr/include/geant/G4Tubs.hh /usr/include/geant/G4Tubs.icc \
  /usr/include/geant/G4Sphere.hh /usr/include/geant/G4Sphere.icc \
  /usr/include/geant/G4PVPlacement.hh \
  /usr/include/geant/G4VisAttributes.hh /usr/include/geant/G4Colour.hh \
@@ -3377,9 +3378,13 @@ SceneConfig.h:
 
 /usr/include/geant/G4Allocator.hh:
 
-/usr/include/geant/G4Tubs.hh:
+/usr/include/geant/G4Box.hh:
 
 /usr/include/geant/G4CSGSolid.hh:
+
+/usr/include/geant/G4Box.icc:
+
+/usr/include/geant/G4Tubs.hh:
 
 /usr/include/geant/G4Tubs.icc:
 

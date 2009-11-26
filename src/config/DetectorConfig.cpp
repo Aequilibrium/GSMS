@@ -25,6 +25,7 @@
 #include "GSMS.h"
 #include "detector/Detector.h"
 
+#include <geant/G4Box.hh>
 #include <geant/G4Tubs.hh>
 #include <geant/G4Sphere.hh>
 #include <geant/G4PVPlacement.hh>
@@ -59,6 +60,9 @@ unsigned int	GSMS::DetectorConfig::imprint(G4VPhysicalVolume* wptr)
 		G4VSolid*	s_mirror = NULL;
 		G4VSolid*	s_shirt = NULL;
 
+		G4VSolid*	s_plate = NULL;
+		G4VSolid*	s_bshirt = NULL;
+
 		if(m_shape == "Cyllinder")
 		{
 			s_crystal = new G4Tubs(
@@ -82,6 +86,23 @@ unsigned int	GSMS::DetectorConfig::imprint(G4VPhysicalVolume* wptr)
 				m_height/2 + m_mirror_thick + m_shirt_thick,
 				0.0*deg,
 				360.0*deg);
+
+
+			s_bshirt = new G4Tubs(
+				"bshirt",
+				m_radius + m_mirror_thick,
+				m_radius + m_mirror_thick + m_shirt_thick,
+				15.4*cm/2,
+				0.0*deg,
+				360.0*deg);
+
+			s_plate = new G4Box(
+				"element",
+				8.5*cm/2,
+				5.8*cm/2,
+				0.6*cm/2);
+
+
 		}
 		else if (m_shape == "Sphere")
 		{
@@ -137,6 +158,37 @@ unsigned int	GSMS::DetectorConfig::imprint(G4VPhysicalVolume* wptr)
 						shirt_mat,
 						"shirt_log");
 
+		G4LogicalVolume*	bshirt_log = new G4LogicalVolume(
+						s_bshirt,
+						shirt_mat,
+						"bshirt_log");
+		G4LogicalVolume*	plate_log = new G4LogicalVolume(
+						s_plate,
+						shirt_mat,
+						"plate_log");
+
+
+		G4double	plate_offset = (m_height/2 + m_mirror_thick + m_shirt_thick) + 0.3*cm;
+		G4double	bshirt_offset = plate_offset + 0.3*cm + 15.4*cm/2;
+
+
+		G4VPhysicalVolume*	plate_phys = new G4PVPlacement(
+						0,
+						G4ThreeVector(0.,0.,plate_offset),
+						"plate_phys",
+						plate_log,
+						world,
+						true,
+						0);
+		G4VPhysicalVolume*	bshirt_phys = new G4PVPlacement(
+						0,
+						G4ThreeVector(0.,0.,bshirt_offset),
+						"bshirt_phys",
+						bshirt_log,
+						world,
+						true,
+						0);
+
 
 		G4VPhysicalVolume*	shirt_phys = new G4PVPlacement(
 						0,
@@ -144,7 +196,7 @@ unsigned int	GSMS::DetectorConfig::imprint(G4VPhysicalVolume* wptr)
 						"shirt_phys",
 						shirt_log,
 						world,
-						false,
+						true,
 						0);
 		G4VPhysicalVolume*	mirror_phys = new G4PVPlacement(
 						0,
@@ -152,16 +204,15 @@ unsigned int	GSMS::DetectorConfig::imprint(G4VPhysicalVolume* wptr)
 						"mirror_phys",
 						mirror_log,
 						shirt_phys,
-						false,
+						true,
 						0);
-
 		G4VPhysicalVolume*	crystal_phys = new G4PVPlacement(
 						0,
 						G4ThreeVector(0.,0.,0.),
 						"crystal_phys",
 						crystal_log,
 						mirror_phys,
-						false,
+						true,
 						0);
 
 		G4VisAttributes*	crystal_vis = new G4VisAttributes(GSMS_COLOR_CRYSTAL);
@@ -179,6 +230,8 @@ unsigned int	GSMS::DetectorConfig::imprint(G4VPhysicalVolume* wptr)
 		crystal_log->SetVisAttributes(crystal_vis);
 		mirror_log->SetVisAttributes(mirror_vis);
 		shirt_log->SetVisAttributes(shirt_vis);
+		bshirt_log->SetVisAttributes(shirt_vis);
+		plate_log->SetVisAttributes(shirt_vis);
 
 /*
 		G4SDManager*		sd_manager = G4SDManager::GetSDMpointer();
